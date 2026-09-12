@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lingua MemeCoin - Terminal de Arquitectura Descentralizada</title>
+    <style>
+        :root {
+            --bg-main: #080b10;
+            --bg-surface: #0d131f;
+            --bg-card: #141c2f;
+            --border-color: #22314d;
+            --text-primary: #f0f4f8;
+            --text-secondary: #8da2bb;
+            --accent-solana: #9945FF;
+            --accent-cyan: #14F195;
+            --accent-gold: #ffb703;
+            --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Terminal Header */
+        header {
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(var(--accent-solana), var(--accent-cyan));
+        }
+
+        .header-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.2rem;
+            letter-spacing: -0.5px;
+        }
+
+        .badge-net {
+            background-color: rgba(20, 241, 149, 0.1);
+            color: var(--accent-cyan);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid rgba(20, 241, 149, 0.2);
+            font-weight: bold;
+        }
+
+        /* CA Box */
+        .ca-container {
+            background-color: var(--bg-main);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 12px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .ca-text {
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            color: var(--accent-cyan);
+            word-break: break-all;
+        }
+
+        /* Grid System */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 850px) {
+            .grid-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Modules & Cards */
+        .module-card {
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        /* Technical Data Tables */
+        .tech-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .tech-table td {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(34, 49, 77, 0.5);
+        }
+
+        .tech-table td:first-child {
+            color: var(--text-secondary);
+            font-family: var(--font-mono);
+            width: 45%;
+        }
+
+        .tech-table td:last-child {
+            font-weight: 600;
+            text-align: right;
+        }
+
+        .status-pill {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-family: var(--font-mono);
+            font-weight: bold;
+        }
+
+        .status-pill.success {
+            background-color: rgba(20, 241, 149, 0.15);
+            color: var(--accent-cyan);
+        }
+
+        .status-pill.warning {
+            background-color: rgba(255, 183, 3, 0.15);
+            color: var(--accent-gold);
+        }
+
+        /* Code Block Simulation */
+        .code-terminal {
+            background-color: var(--bg-main);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 16px;
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: #a6accd;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+
+        .code-comment { color: #676e95; }
+        .code-keyword { color: #c792ea; }
+        .code-string { color: #c3e88d; }
+
+        /* Links & Buttons */
+        .links-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .action-btn {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 14px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.2s ease;
+        }
+
+        .action-btn:hover {
+            border-color: var(--accent-solana);
+            background-color: rgba(153, 69, 255, 0.05);
+            transform: translateX(4px);
+        }
+
+        .action-btn .icon {
+            color: var(--accent-solana);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- CONTROL TERMINAL HEADER -->
+        <header>
+            <div class="header-meta">
+                <span>LOC: HONDURAS (AMÉRICA CENTRAL)</span>
+                <span class="badge-net">SOLANA MAINNET-BETA</span>
+            </div>
+            <h1>🌍 Ecosistema Lingua ($LNG)</h1>
+            <p style="color: var(--text-secondary); margin: 0;">Plataforma Descentralizada de Integración Cultural y Repositorio de Código Abierto.</p>
+            
+            <div class="ca-container">
+                <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary);">CA:</span>
+                <span class="ca-text">AXjMKnXbXo1LXtdSmrkiDUoZkj9fzwfc5afj79G6o84x</span>
+            </div>
+        </header>
+
+        <!-- MAIN LAYOUT GRID -->
+        <div class="grid-layout">
+            
+            <!-- LEFT COLUMN: MAIN ARCHITECTURE -->
+            <main>
+                
+                <!-- MODULE 1: COMPONENT FROM README.md & VISION.md -->
+                <section class="module-card">
+                    <h2>🔎 01 / Arquitectura Fundamental & Visión</h2>
+                    <p>Lingua no es un vehículo financiero con fines de lucro; es una <strong>MemeCoin cultural e institucional de código abierto</strong> diseñada para mitigar las asimetrías de descentralización en América.</p>
+                    <p>El núcleo del proyecto radica en convertir la primitiva criptográfica de una memecoin en una herramienta lingüística comunitaria que conecte repositorios globales con programadores, artistas y creadores regionales sin requerir inyecciones masivas de capital externo.</p>
+                    
+                    <div class="code-terminal">
+<span class="code-comment">// Inicialización de entorno declarada en repositorio</span>
+$ git clone https://github.com
+$ npm install
+$ <span class="code-keyword">npm run dev</span> <span class="code-comment"># Inicializando la capa del ecosistema</span></div>
+                </section>
+
+                <!-- MODULE 2: COMPONENT FROM TOKENOMICS_ANALYSIS.md -->
+                <section class="module-card">
+                    <h2>📊 02 / Tokenomics & Auditoría Inmutable</h2>
+                    <table class="tech-table">
+                        <tr>
+                            <td>Suministro Fijo Total (Supply)</td>
+                            <td>1,000,000,000 $LNG</td>
+                        </tr>
+                        <tr>
+                            <td>Función de Impresión (Mint Authority)</td>
+                            <td><span class="status-pill success">DESTRUIDA / RENUNCIADA</span></td>
+                        </tr>
+                        <tr>
+                            <td>Función de Bloqueo (Freeze Authority)</td>
+                            <td><span class="status-pill success">DESTRUIDA / RENUNCIADA</span></td>
+                        </tr>
+                        <tr>
+                            <td>Arquitectura del Token</td>
+                            <td>Token-2022 Standard (Solana)</td>
+                        </tr>
+                        <tr>
+                            <td>Estructura de Tarifas (Tax Rule)</td>
+                            <td>0.0001% Fijo e Inmutable</td>
+                        </tr>
+                    </table>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0;">
