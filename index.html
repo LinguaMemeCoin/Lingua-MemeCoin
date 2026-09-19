@@ -1,299 +1,304 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lingua MemeCoin - Terminal de Arquitectura Descentralizada</title>
-    <style>
-        :root {
-            --bg-main: #080b10;
-            --bg-surface: #0d131f;
-            --bg-card: #141c2f;
-            --border-color: #22314d;
-            --text-primary: #f0f4f8;
-            --text-secondary: #8da2bb;
-            --accent-solana: #9945FF;
-            --accent-cyan: #14F195;
-            --accent-gold: #ffb703;
-            --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Lingua MemeCoin es una iniciativa de ecosistema cultural y comunitario sobre Solana, con tokenómica clara, código abierto y enfoque en diversidad lingüística."
+    />
+    <meta
+      name="keywords"
+      content="Lingua MemeCoin, $LNG, Solana, tokenómica, open source, comunidad, cultura"
+    />
+    <meta name="theme-color" content="#080d19" />
+    <title>Lingua MemeCoin | Ecosistema Cultural y Tecnológico</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-glow page-glow-one"></div>
+    <div class="page-glow page-glow-two"></div>
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-main);
-            color: var(--text-primary);
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-        }
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="#top" class="brand" aria-label="Ir al inicio">
+          <span class="brand-mark">L</span>
+          <span>Lingua</span>
+        </a>
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a href="#about">Sobre</a>
+          <a href="#vision">Visión</a>
+          <a href="#tokenomics">Tokenomics</a>
+          <a href="#roadmap">Roadmap</a>
+          <a href="#presale">Presale</a>
+        </nav>
 
-        /* Terminal Header */
-        header {
-            background-color: var(--bg-surface);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 24px;
-            margin-bottom: 30px;
-            position: relative;
-            overflow: hidden;
-        }
+        <a
+          class="button button-ghost"
+          href="https://github.com/LinguaMemeCoin/Lingua-MemeCoin"
+          target="_blank"
+          rel="noreferrer"
+          >Repositorio</a
+        >
+      </div>
+    </header>
 
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: linear-gradient(var(--accent-solana), var(--accent-cyan));
-        }
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Ecosistema Lingua · $LNG</p>
+            <h1>Una memecoin con propósito, comunidad y arquitectura abierta.</h1>
+            <p class="lead">
+              Lingua MemeCoin combina cultura, idioma, innovación y tecnología descentralizada
+              para construir un ecosistema que conecta identidades, conocimiento y comunidad
+              en un mismo punto de partida: la lengua compartida.
+            </p>
 
-        .header-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-family: var(--font-mono);
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            margin-bottom: 15px;
-        }
-
-        h1 {
-            margin: 0 0 10px 0;
-            font-size: 2.2rem;
-            letter-spacing: -0.5px;
-        }
-
-        .badge-net {
-            background-color: rgba(20, 241, 149, 0.1);
-            color: var(--accent-cyan);
-            padding: 4px 10px;
-            border-radius: 4px;
-            border: 1px solid rgba(20, 241, 149, 0.2);
-            font-weight: bold;
-        }
-
-        /* CA Box */
-        .ca-container {
-            background-color: var(--bg-main);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 12px 16px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 15px;
-        }
-
-        .ca-text {
-            font-family: var(--font-mono);
-            font-size: 0.9rem;
-            color: var(--accent-cyan);
-            word-break: break-all;
-        }
-
-        /* Grid System */
-        .grid-layout {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 30px;
-        }
-
-        @media (max-width: 850px) {
-            .grid-layout {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Modules & Cards */
-        .module-card {
-            background-color: var(--bg-surface);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 24px;
-            margin-bottom: 25px;
-        }
-
-        h2 {
-            font-size: 1.4rem;
-            margin-top: 0;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 10px;
-        }
-
-        /* Technical Data Tables */
-        .tech-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.95rem;
-            margin-bottom: 15px;
-        }
-
-        .tech-table td {
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(34, 49, 77, 0.5);
-        }
-
-        .tech-table td:first-child {
-            color: var(--text-secondary);
-            font-family: var(--font-mono);
-            width: 45%;
-        }
-
-        .tech-table td:last-child {
-            font-weight: 600;
-            text-align: right;
-        }
-
-        .status-pill {
-            display: inline-block;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-family: var(--font-mono);
-            font-weight: bold;
-        }
-
-        .status-pill.success {
-            background-color: rgba(20, 241, 149, 0.15);
-            color: var(--accent-cyan);
-        }
-
-        .status-pill.warning {
-            background-color: rgba(255, 183, 3, 0.15);
-            color: var(--accent-gold);
-        }
-
-        /* Code Block Simulation */
-        .code-terminal {
-            background-color: var(--bg-main);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 16px;
-            font-family: var(--font-mono);
-            font-size: 0.85rem;
-            color: #a6accd;
-            overflow-x: auto;
-            white-space: pre-wrap;
-        }
-
-        .code-comment { color: #676e95; }
-        .code-keyword { color: #c792ea; }
-        .code-string { color: #c3e88d; }
-
-        /* Links & Buttons */
-        .links-sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .action-btn {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border-color);
-            color: var(--text-primary);
-            padding: 14px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: all 0.2s ease;
-        }
-
-        .action-btn:hover {
-            border-color: var(--accent-solana);
-            background-color: rgba(153, 69, 255, 0.05);
-            transform: translateX(4px);
-        }
-
-        .action-btn .icon {
-            color: var(--accent-solana);
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
-            color: var(--text-secondary);
-            font-family: var(--font-mono);
-            font-size: 0.85rem;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        
-        <!-- CONTROL TERMINAL HEADER -->
-        <header>
-            <div class="header-meta">
-                <span>LOC: HONDURAS (AMÉRICA CENTRAL)</span>
-                <span class="badge-net">SOLANA MAINNET-BETA</span>
+            <div class="cta-row">
+              <a class="button button-primary" href="#presale">Ver presale</a>
+              <a class="button button-secondary" href="#tokenomics">Explorar tokenomics</a>
             </div>
-            <h1>🌍 Ecosistema Lingua ($LNG)</h1>
-            <p style="color: var(--text-secondary); margin: 0;">Plataforma Descentralizada de Integración Cultural y Repositorio de Código Abierto.</p>
-            
-            <div class="ca-container">
-                <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary);">CA:</span>
-                <span class="ca-text">AXjMKnXbXo1LXtdSmrkiDUoZkj9fzwfc5afj79G6o84x</span>
+
+            <ul class="fact-list" aria-label="Indicadores claves">
+              <li>
+                <span>Supply</span>
+                <strong>1,000,000,000</strong>
+              </li>
+              <li>
+                <span>Red</span>
+                <strong>Solana</strong>
+              </li>
+              <li>
+                <span>Tax</span>
+                <strong>0.0001%</strong>
+              </li>
+            </ul>
+          </div>
+
+          <div class="terminal-panel reveal">
+            <div class="terminal-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="terminal-title">lingua-core</span>
             </div>
-        </header>
 
-        <!-- MAIN LAYOUT GRID -->
-        <div class="grid-layout">
-            
-            <!-- LEFT COLUMN: MAIN ARCHITECTURE -->
-            <main>
-                
-                <!-- MODULE 1: COMPONENT FROM README.md & VISION.md -->
-                <section class="module-card">
-                    <h2>🔎 01 / Arquitectura Fundamental & Visión</h2>
-                    <p>Lingua no es un vehículo financiero con fines de lucro; es una <strong>MemeCoin cultural e institucional de código abierto</strong> diseñada para mitigar las asimetrías de descentralización en América.</p>
-                    <p>El núcleo del proyecto radica en convertir la primitiva criptográfica de una memecoin en una herramienta lingüística comunitaria que conecte repositorios globales con programadores, artistas y creadores regionales sin requerir inyecciones masivas de capital externo.</p>
-                    
-                    <div class="code-terminal">
-<span class="code-comment">// Inicialización de entorno declarada en repositorio</span>
-$ git clone https://github.com
-$ npm install
-$ <span class="code-keyword">npm run dev</span> <span class="code-comment"># Inicializando la capa del ecosistema</span></div>
-                </section>
+            <div class="terminal-body">
+              <div class="code-line"><span class="token purple">token</span> = <span class="token green">"Lingua MemeCoin"</span></div>
+              <div class="code-line"><span class="token blue">network</span> = <span class="token green">"Solana Mainnet-Beta"</span></div>
+              <div class="code-line"><span class="token blue">supply</span> = <span class="token green">1_000_000_000</span></div>
+              <div class="code-line"><span class="token blue">mint_authority</span> = <span class="token red">renounced</span></div>
+              <div class="code-line"><span class="token blue">freeze_authority</span> = <span class="token red">renounced</span></div>
+              <div class="code-line"><span class="token blue">architecture</span> = <span class="token green">"open-source + community"</span></div>
+              <div class="code-line"><span class="token blue">mission</span> = <span class="token green">"Conectar culturas con acceso digital"</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                <!-- MODULE 2: COMPONENT FROM TOKENOMICS_ANALYSIS.md -->
-                <section class="module-card">
-                    <h2>📊 02 / Tokenomics & Auditoría Inmutable</h2>
-                    <table class="tech-table">
-                        <tr>
-                            <td>Suministro Fijo Total (Supply)</td>
-                            <td>1,000,000,000 $LNG</td>
-                        </tr>
-                        <tr>
-                            <td>Función de Impresión (Mint Authority)</td>
-                            <td><span class="status-pill success">DESTRUIDA / RENUNCIADA</span></td>
-                        </tr>
-                        <tr>
-                            <td>Función de Bloqueo (Freeze Authority)</td>
-                            <td><span class="status-pill success">DESTRUIDA / RENUNCIADA</span></td>
-                        </tr>
-                        <tr>
-                            <td>Arquitectura del Token</td>
-                            <td>Token-2022 Standard (Solana)</td>
-                        </tr>
-                        <tr>
-                            <td>Estructura de Tarifas (Tax Rule)</td>
-                            <td>0.0001% Fijo e Inmutable</td>
-                        </tr>
-                    </table>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0;">
+      <section class="metrics" id="about">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow dark">Arquitectura</p>
+            <h2>Un ecosistema pensado para la comunidad y la sostenibilidad.</h2>
+          </div>
+
+          <div class="card-grid">
+            <article class="info-card reveal">
+              <div class="icon-wrap">01</div>
+              <h3>Comunidad</h3>
+              <p>
+                Un modelo centrado en participación activa, educación, inclusión y valor cultural
+                compartido entre usuarios, creadores y colaboradores.
+              </p>
+            </article>
+
+            <article class="info-card reveal">
+              <div class="icon-wrap">02</div>
+              <h3>Infraestructura</h3>
+              <p>
+                Base técnica en Solana con enfoque en transparencia, simplicidad operativa y
+                evolución abierta del ecosistema.
+              </p>
+            </article>
+
+            <article class="info-card reveal">
+              <div class="icon-wrap">03</div>
+              <h3>Credibilidad</h3>
+              <p>
+                Documentación técnica, intenciones claras, tokenómica definida y principios de
+                seguridad para reducir ruido y aumentar confianza.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="story" id="vision">
+        <div class="container split-layout">
+          <div class="story-copy reveal">
+            <p class="eyebrow dark">Visión</p>
+            <h2>Más que una meme coin: una plataforma cultural y tecnológica de impacto.</h2>
+            <p>
+              Lingua busca convertir la identidad lingüística y cultural en una capa de valor
+              compartido. No se trata solo de la especulación ni del meme, sino de utilizar la
+              tecnología para crear conexiones reales entre comunidades, conocimientos y recursos.
+            </p>
+            <p>
+              El proyecto apuesta por una narrativa abierta, una infraestructura clara y una base
+              de usuarios que comprenda que la innovación se vuelve más fuerte cuando incluye la
+              humanidad, la diversidad y el acceso.
+            </p>
+          </div>
+
+          <aside class="principles reveal" aria-label="Principios del proyecto">
+            <h3>Principios clave</h3>
+            <ul>
+              <li><span>✓</span> Acceso abierto y colaboración</li>
+              <li><span>✓</span> Diversidad lingüística y cultural</li>
+              <li><span>✓</span> Transparencia técnica</li>
+              <li><span>✓</span> Comunidad como motor de valor</li>
+              <li><span>✓</span> Seguridad y disciplina de ejecución</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="tokenomics" id="tokenomics">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow dark">Tokenomics</p>
+            <h2>Modelo simple, claro y preparado para construir confianza.</h2>
+          </div>
+
+          <div class="token-table-wrap reveal">
+            <table class="token-table">
+              <tbody>
+                <tr>
+                  <th>Supply total</th>
+                  <td>1,000,000,000 $LNG</td>
+                </tr>
+                <tr>
+                  <th>Protocolo</th>
+                  <td>Token-2022 Standard</td>
+                </tr>
+                <tr>
+                  <th>Mint Authority</th>
+                  <td><span class="status success">Renunciada / destruida</span></td>
+                </tr>
+                <tr>
+                  <th>Freeze Authority</th>
+                  <td><span class="status success">Renunciada / destruida</span></td>
+                </tr>
+                <tr>
+                  <th>Tax fijo</th>
+                  <td>0.0001% inmutable</td>
+                </tr>
+                <tr>
+                  <th>Propósito</th>
+                  <td>Infraestructura cultural, comunitaria y de ecosistema</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="roadmap" id="roadmap">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow dark">Roadmap</p>
+            <h2>Fases de crecimiento y ejecución.</h2>
+          </div>
+
+          <div class="timeline reveal">
+            <article class="timeline-item">
+              <div class="time">Q3 2026</div>
+              <div class="timeline-copy">
+                <h3>Base del proyecto</h3>
+                <p>Repositorio, documentos, visión, tokenómica y redes de presentación.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="time">Q4 2026</div>
+              <div class="timeline-copy">
+                <h3>Producto y comunidad</h3>
+                <p>Desarrollo de interfaz, estructura web, onboarding y mejor experiencia.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="time">2027</div>
+              <div class="timeline-copy">
+                <h3>Expansión real</h3>
+                <p>Integración, governance, wallet, capital social y comunidad global.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="presale" id="presale">
+        <div class="container presale-grid">
+          <div class="presale-panel reveal">
+            <p class="eyebrow dark">Presale</p>
+            <h2>Un flujo de lanzamiento claro y ordenado.</h2>
+            <ol class="steps">
+              <li>Definición de condiciones y estructura del evento.</li>
+              <li>Documentación técnica y comunicación pública.</li>
+              <li>Protecciones, reglas y cronograma transparentes.</li>
+              <li>Activación con comunidad, seguimiento y evolución.</li>
+            </ol>
+          </div>
+
+          <div class="presale-panel highlight reveal">
+            <p class="eyebrow dark">Protecciones</p>
+            <ul class="checks">
+              <li>Mint authority removida</li>
+              <li>Freeze authority removida</li>
+              <li>Tax fijo e inmutable</li>
+              <li>Boilerplate documental claro</li>
+              <li>Responsabilidad comunitaria</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-box reveal">
+            <div>
+              <p class="eyebrow dark">Proyecto abierto</p>
+              <h2>Construyamos una base sólida para el próximo capítulo.</h2>
+            </div>
+            <a
+              class="button button-primary"
+              href="https://github.com/LinguaMemeCoin/Lingua-MemeCoin"
+              target="_blank"
+              rel="noreferrer"
+              >Explorar repositorio</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© <span id="year"></span> Lingua MemeCoin</p>
+        <p>Diferentes culturas, una misma lengua.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
