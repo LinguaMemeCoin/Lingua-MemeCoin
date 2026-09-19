@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lingua MemeCoin | One Lingua</title>
-    <!-- Cargamos Tailwind CSS para la arquitectura visual -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://tailwindcss.com"></script>
     <!-- Fuentes de Google: Cinzel y Plus Jakarta Sans -->
     <link rel="preconnect" href="https://googleapis.com">
@@ -14,7 +14,7 @@
     <style>
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif; 
-            background-color: #0d0f12; /* Fondo de obsidiana profundo */
+            background-color: #0d0f12; 
         }
         .font-maya {
             font-family: 'Cinzel', serif;
@@ -27,7 +27,7 @@
 <body class="text-gray-400 min-h-screen antialiased selection:bg-[#DFD5C6] selection:text-[#0d0f12]">
 
     <!-- SALUDO GEOLOCALIZADO DINÁMICO -->
-    <div id="banner-bienvenida" class="bg-[#15120e] border-b border-[#2d2720] px-6 py-2.5 text-center hidden transition-all duration-500">
+    <div id="banner-bienvenida" class="bg-[#15120e] border-b border-[#2d2720] px-6 py-2.5 text-center hidden">
         <p class="font-maya text-[10px] tracking-[0.25em] text-[#C4B5A1] uppercase flex items-center justify-center gap-2">
             <span id="saludo-icono">🪶</span>
             <span id="saludo-texto">Conectando desde los orígenes</span>
@@ -43,7 +43,8 @@
                 <div class="text-lg font-black tracking-[0.3em] font-maya text-[#DFD5C6]">L LINGUA</div>
             </div>
             <div class="flex space-x-8 text-[10px] font-maya tracking-[0.2em] uppercase">
-                <a href="#mascota" class="hover:text-[#DFD5C6] text-gray-500 transition-colors duration-300">La Mascota</a>
+                <a href="#mascota" class="hover:text-[#DFD5C6] text-gray-500 transition-colors duration-300">Mascota</a>
+                <a href="#comprar" class="hover:text-[#DFD5C6] text-gray-500 transition-colors duration-300">Comprar</a>
                 <a href="#idea" class="hover:text-[#DFD5C6] text-gray-500 transition-colors duration-300">La Idea</a>
                 <a href="#tokenomics" class="hover:text-[#DFD5C6] text-gray-500 transition-colors duration-300">Tokenomics</a>
             </div>
@@ -62,13 +63,11 @@
         <div id="mascota" class="mb-10 relative inline-block group">
             <div class="absolute inset-0 bg-[#DFD5C6]/10 rounded-full blur-xl group-hover:bg-[#DFD5C6]/20 transition-all duration-500"></div>
             <div class="w-32 h-32 md:w-40 md:h-40 rounded-full border-2 border-[#2d2720] bg-[#13161c] p-2 relative z-10 flex items-center justify-center overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-105">
-                <!-- La imagen cambiará por código según la geolocalización -->
                 <img id="mascota-img" 
                      src="https://unsplash.com" 
                      alt="Mascota Oficial de Lingua" 
                      class="w-full h-full object-cover rounded-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
             </div>
-            <!-- Etiqueta lapidaria que cambia su nombre -->
             <div id="mascota-etiqueta" class="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-[#15120e] border border-[#3e352b] text-[#C4B5A1] font-maya text-[8px] tracking-widest px-3 py-1 rounded uppercase z-20 whitespace-nowrap shadow-md">
                 Ara Macao · Mascota Oficial
             </div>
@@ -79,14 +78,13 @@
             <span class="text-gray-600 font-medium">One Lingua.</span>
         </h1>
         
-        <!-- Párrafo descriptivo que se adapta dinámicamente -->
         <p id="hero-descripcion" class="text-base text-gray-500 max-w-2xl mx-auto mb-12 leading-relaxed font-light">
-            El primer manifiesto de identidad cultural en Solana. Inspirado en el vuelo y herencia de la Guacamaya Roja Hondureña, enlazamos el legado lingüístico global mediante tecnología criptográfica simétrica.
+            El primer manifiesto de identidad cultural en Solana. Inspirado en el vuelo y herencia de la Guacamaya Roja Hondureña, enlazamos el legado lingüístico global mediante tecnología criptográfica.
         </p>
         
         <div class="flex flex-col sm:flex-row justify-center gap-4 text-[10px] font-maya tracking-[0.25em] uppercase">
-            <a href="#" class="bg-[#DFD5C6] text-[#0d0f12] font-bold px-10 py-4 rounded-tl-xl rounded-br-xl hover:bg-[#C4B5A1] transition-all duration-300 shadow-xl hover:scale-[1.02]">
-                Explorar $LNG
+            <a href="#comprar" class="bg-[#DFD5C6] text-[#0d0f12] font-bold px-10 py-4 rounded-tl-xl rounded-br-xl hover:bg-[#C4B5A1] transition-all duration-300 shadow-xl hover:scale-[1.02]">
+                Adquirir $LNG
             </a>
             <a href="#idea" class="border border-[#232730] hover:border-gray-600 text-gray-400 px-10 py-4 rounded-tr-xl rounded-bl-xl transition-all duration-300 backdrop-blur-sm">
                 Descubrir Visión
@@ -95,7 +93,7 @@
     </header>
 
     <!-- CUADROS DE MÉTRICAS AVANZADAS -->
-    <section class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 px-6 mb-32 text-center font-maya tracking-widest relative z-10">
+    <section class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 px-6 mb-24 text-center font-maya tracking-widest relative z-10">
         <div class="bg-[#13161c]/60 border border-[#1d212a] mineral-glow p-6 rounded-tl-xl rounded-br-xl">
             <div class="text-xs text-gray-600 uppercase mb-1">Supply Total</div>
             <div class="text-xl font-bold text-[#DFD5C6]">1,000,000,000</div>
@@ -114,33 +112,48 @@
         </div>
     </section>
 
-    <!-- LA IDEA -->
-    <section id="idea" class="max-w-5xl mx-auto py-16 px-6 mb-32 border-t border-[#16191f]">
-        <h2 class="text-xl md:text-2xl font-bold text-[#DFD5C6] text-center mb-16 font-maya tracking-[0.2em] uppercase">
-            La tecnología también puede ser <span class="text-gray-600">humana</span>
+    <!-- CÓMO COMPRAR $LNG -->
+    <section id="comprar" class="max-w-5xl mx-auto py-16 px-6 mb-32 border-t border-[#16191f]">
+        <h2 class="text-xl md:text-2xl font-bold text-[#DFD5C6] text-center mb-2 font-maya tracking-[0.2em] uppercase">
+            Instrucciones de Adquisición
         </h2>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-[#13161c]/30 border border-[#1d212a] p-8 rounded-tl-2xl rounded-br-2xl shadow-2xl relative overflow-hidden group hover:border-[#2d3341] transition-all duration-300">
-                <div class="text-[#2d2720] font-maya text-7xl font-black absolute -right-4 -bottom-6 select-none opacity-20 transition-opacity group hover:opacity-30">01</div>
-                <div class="text-gray-600 font-maya text-[9px] tracking-[0.25em] mb-4">CULTURA / IDENTIDAD</div>
-                <h3 class="text-base font-bold text-[#DFD5C6] mb-4 font-maya tracking-wider">Diversidad sin fricciones</h3>
-                <p class="text-sm text-gray-500 leading-relaxed font-light">
-                    Transformamos la pluralidad lingüística en valor criptográfico estable. Protegemos el conocimiento ancestral y las voces comunitarias dentro de bloques inmutables de código abierto.
+        <p class="text-[9px] text-gray-600 text-center mb-16 font-maya tracking-[0.25em] uppercase">
+            Sigue los pasos esenciales en la red Solana
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-6 font-light">
+            <div class="bg-[#13161c]/40 border border-[#1d212a] p-8 rounded-tl-xl rounded-br-xl mineral-glow">
+                <div class="font-maya text-[#C4B5A1] text-xs tracking-widest mb-4 border-b border-[#1d212a] pb-2 flex justify-between">
+                    <span>PASO 01</span>
+                    <span>🪶</span>
+                </div>
+                <h3 class="font-maya text-[#DFD5C6] text-sm tracking-wider mb-3">Preparar Billetera</h3>
+                <p class="text-xs text-gray-500 leading-relaxed">
+                    Descarga una extensión o aplicación Web3 compatible con Solana como <strong>Phantom</strong> o <strong>Solflare</strong>. Resguarda de forma segura tu clave semilla de recuperación.
                 </p>
             </div>
-            <div class="bg-[#13161c]/30 border border-[#1d212a] p-8 rounded-tr-2xl rounded-bl-2xl shadow-2xl relative overflow-hidden group hover:border-[#2d3341] transition-all duration-300">
-                <div class="text-[#2d2720] font-maya text-7xl font-black absolute -right-4 -bottom-6 select-none opacity-20 transition-opacity group hover:opacity-30">02</div>
-                <div class="text-gray-600 font-maya text-[9px] tracking-[0.25em] mb-4">GOBERNANZA / UNIÓN</div>
-                <h3 class="text-base font-bold text-[#DFD5C6] mb-4 font-maya tracking-wider">Espacio Simétrico</h3>
-                <p class="text-sm text-gray-500 leading-relaxed font-light">
-                    Un ecosistema abierto diseñado para derribar fronteras. Cada participante interactúa bajo las mismas reglas técnicas, sin importar su herencia o coordenadas geográficas.
+            <div class="bg-[#13161c]/40 border border-[#1d212a] p-8 rounded-xl mineral-glow">
+                <div class="font-maya text-[#C4B5A1] text-xs tracking-widest mb-4 border-b border-[#1d212a] pb-2 flex justify-between">
+                    <span>PASO 02</span>
+                    <span>🪙</span>
+                </div>
+                <h3 class="font-maya text-[#DFD5C6] text-sm tracking-wider mb-3">Fondear con SOL</h3>
+                <p class="text-xs text-gray-500 leading-relaxed">
+                    Adquiere fondos de Solana (SOL) en tu casa de cambio de preferencia y envíalos directamente a la dirección pública de tu nueva billetera descentralizada.
+                </p>
+            </div>
+            <div class="bg-[#13161c]/40 border border-[#1d212a] p-8 rounded-tr-xl rounded-bl-xl mineral-glow">
+                <div class="font-maya text-[#C4B5A1] text-xs tracking-widest mb-4 border-b border-[#1d212a] pb-2 flex justify-between">
+                    <span>PASO 03</span>
+                    <span>🔄</span>
+                </div>
+                <h3 class="font-maya text-[#DFD5C6] text-sm tracking-wider mb-3">Intercambiar por $LNG</h3>
+                <p class="text-xs text-gray-500 leading-relaxed">
+                    Conecta tu billetera a un agregador descentralizado (como <strong>Jupiter</strong> o <strong>Raydium</strong>). Introduce la dirección del contrato oficial de Lingua e intercambia tus SOL por <strong>$LNG</strong>.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- TOKENOMICS -->
-    <section id="tokenomics" class="bg-[#111317]/60 border-y border-[#181b22] py-24 px-6 mb-32 shadow-inner">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-xl font-bold text-[#DFD5C6] text-center mb-2 font-maya tracking-[0.2em] uppercase">Mecanismos de Transparencia</h2>
-            <p class="text-[9px] text-gray-600 text-center mb-16 font-maya tracking-[0.25em] uppercase">Estructura arquitectónica y contratos blindados</p>
+    <!-- LA IDEA -->
+    <section id="idea" class="max-w-5xl mx-auto py-16 px-6 mb-32 border-t border-[#16191f]">
