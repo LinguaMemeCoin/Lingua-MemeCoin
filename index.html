@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Lingua MemeCoin — una comunidad global, un ecosistema cultural y una infraestructura digital abierta sobre Solana."
+      content="Lingua MemeCoin — Diferentes culturas, una misma lengua. Ecosistema digital, comunidad global y visión abierta sobre Solana."
     />
-    <meta name="theme-color" content="#0a0d14" />
+    <meta name="theme-color" content="#0b101a" />
     <title>Lingua MemeCoin | Different cultures. One Lingua.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="background-grid"></div>
+    <div class="noise"></div>
 
     <header class="site-header">
       <div class="container nav-wrap">
@@ -28,13 +28,12 @@
         </a>
 
         <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </button>
 
         <nav class="nav" aria-label="Navegación principal">
           <a href="#vision">Visión</a>
+          <a href="#platform">Plataforma</a>
           <a href="#tokenomics">Tokenomics</a>
           <a href="#roadmap">Roadmap</a>
           <a href="#presale">Presale</a>
@@ -58,52 +57,58 @@
         <div class="hero-copy reveal">
           <div class="eyebrow">
             <span></span>
-            Built on Solana · Open source ecosystem
+            Ecosistema abierto · Solana
           </div>
+
           <h1>
             Different cultures.<br />
             <em>One Lingua.</em>
           </h1>
+
           <p class="lead">
-            Lingua MemeCoin combina identidad cultural, tecnología descentralizada,
-            comunidad y apertura para crear un ecosistema a la vez accesible,
-            sólido y con propósito.
+            Lingua MemeCoin es una comunidad global construida alrededor de la diversidad cultural,
+            la innovación abierta y la conexión entre personas, ideas y tecnologías.
           </p>
 
           <div class="hero-actions">
             <a class="button button-primary" href="https://solscan.io/token/AXjMKnXbXo1LXtdSmrkiDUoZkj9fzwfc5afj79G6o84x" target="_blank" rel="noreferrer">
               Explorar $LNG ↗
             </a>
-            <a class="text-link" href="#vision">Descubre la visión ↓</a>
+            <a class="button button-ghost" href="#vision">Descubrir visión</a>
           </div>
 
           <div class="hero-meta">
             <span class="meta-pill">1B supply</span>
             <span class="meta-pill">Solana</span>
             <span class="meta-pill">Open source</span>
+            <span class="meta-pill">Community first</span>
           </div>
         </div>
 
         <div class="hero-visual reveal">
-          <div class="visual-card main-card">
-            <div class="visual-topbar">
+          <div class="glow glow-one"></div>
+          <div class="glow glow-two"></div>
+
+          <div class="console-card">
+            <div class="console-topbar">
               <span class="dot red"></span>
-              <span class="dot yellow"></span>
+              <span class="dot amber"></span>
               <span class="dot green"></span>
-              <span class="terminal-name">lingua-core</span>
+              <span class="console-name">lingua-core</span>
             </div>
-            <div class="visual-console">
-              <div class="code-line"><span class="tok-key">token</span> = <span class="tok-str">"Lingua MemeCoin"</span></div>
-              <div class="code-line"><span class="tok-key">chain</span> = <span class="tok-str">"Solana Mainnet-Beta"</span></div>
-              <div class="code-line"><span class="tok-key">supply</span> = <span class="tok-str">1_000_000_000</span></div>
-              <div class="code-line"><span class="tok-key">mint</span> = <span class="tok-warn">renounced</span></div>
-              <div class="code-line"><span class="tok-key">freeze</span> = <span class="tok-warn">renounced</span></div>
-              <div class="code-line"><span class="tok-key">mission</span> = <span class="tok-str">"Conectar culturas sin fricción"</span></div>
+
+            <div class="console-body">
+              <div class="code-line"><span class="key">token</span> = <span class="str">"Lingua MemeCoin"</span></div>
+              <div class="code-line"><span class="key">network</span> = <span class="str">"Solana Mainnet-Beta"</span></div>
+              <div class="code-line"><span class="key">supply</span> = <span class="str">1_000_000_000</span></div>
+              <div class="code-line"><span class="key">mint</span> = <span class="warn">renounced</span></div>
+              <div class="code-line"><span class="key">freeze</span> = <span class="warn">renounced</span></div>
+              <div class="code-line"><span class="key">mission</span> = <span class="str">"Conectar culturas sin fricción"</span></div>
             </div>
           </div>
 
-          <div class="floating-mini-card">
-            <div class="mini-dot"></div>
+          <div class="floating-card">
+            <div class="live-dot"></div>
             <div>
               <strong>Live ecosystem</strong>
               <small>Solana network</small>
@@ -112,7 +117,7 @@
         </div>
       </section>
 
-      <section class="ticker-wrap" aria-label="Ticker de datos del proyecto">
+      <div class="ticker-wrap" aria-label="Datos clave del proyecto">
         <div class="ticker-track">
           <span>$LNG</span>
           <span>•</span>
@@ -127,8 +132,10 @@
           <span>1B TOTAL SUPPLY</span>
           <span>•</span>
           <span>SOLANA</span>
+          <span>•</span>
+          <span>OPEN SOURCE</span>
         </div>
-      </section>
+      </div>
 
       <section class="section section-light" id="vision">
         <div class="container two-col">
@@ -139,13 +146,12 @@
             </div>
             <h2>La tecnología también puede ser <em>humana.</em></h2>
             <p>
-              Lingua MemeCoin nace para convertir la diversidad cultural y lingüística en una
-              nueva capa de valor digital: accesible, compartida y construida en comunidad.
+              Lingua MemeCoin nace para convertir la diversidad cultural y lingüística en una nueva
+              capa de valor digital: compartida, abierta y construida en comunidad.
             </p>
             <p>
-              No es solo una pieza financiera: es una estructura de identidad, colaboración y
-              innovación abierta pensada para conectar personas a través de un idioma común y
-              una visión compartida.
+              No es solo una pieza financiera, sino una estructura de identidad, colaboración y
+              innovación abierta pensada para conectar pueblos, lenguas y recursos de manera real.
             </p>
             <a class="inline-link" href="VISION.md">Leer nuestra visión ↗</a>
           </div>
@@ -154,20 +160,17 @@
             <article class="feature-card dark-card">
               <span class="feature-index">01</span>
               <h3>Cultura</h3>
-              <p>La diversidad lingüística como fuerza de creación, comunidad y sentido de pertenencia.</p>
+              <p>La diversidad lingüística como fuerza de creatividad, pertenencia y conexión global.</p>
             </article>
 
             <article class="feature-card">
               <span class="feature-index">02</span>
               <h3>Comunidad</h3>
-              <p>Un espacio abierto para crecer, aportar y construir con intención.</p>
+              <p>Un espacio abierto donde cada persona puede participar, aportar y crecer.</p>
             </article>
 
-            <article class="feature-card image-card">
-              <img
-                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80"
-                alt="Personas conectadas en comunidad"
-              />
+            <article class="feature-card image-card wide-card">
+              <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1000&q=80" alt="Diversidad cultural y comunidad" />
               <div class="image-overlay">
                 <span>Many voices</span>
                 <strong>One community</strong>
@@ -177,37 +180,101 @@
         </div>
       </section>
 
-      <section class="section section-dark" id="tokenomics">
-        <div class="container center-title reveal">
-          <div class="eyebrow">
-            <span></span>
-            Fundamentos
+      <section class="section section-dark" id="platform">
+        <div class="container platform-wrap">
+          <div class="platform-header reveal">
+            <div class="eyebrow">
+              <span></span>
+              ¿Qué representa?
+            </div>
+            <h2>Una plataforma cultural con estructura digital.</h2>
           </div>
-          <h2>Simple por diseño.<br /><em>Construido para durar.</em></h2>
-        </div>
 
-        <div class="container stats-grid reveal">
-          <div class="stat-box">
-            <strong>1B</strong>
-            <span>Total Supply</span>
-          </div>
-          <div class="stat-box">
-            <strong>0.0001%</strong>
-            <span>Tax fijo</span>
-          </div>
-          <div class="stat-box">
-            <strong>∞</strong>
-            <span>Potencial</span>
-          </div>
-          <div class="stat-box">
-            <strong>100%</strong>
-            <span>Comunidad</span>
+          <div class="platform-grid">
+            <article class="platform-card reveal">
+              <span class="card-tag">01</span>
+              <h3>Identidad</h3>
+              <p>Se construye sobre la idea de conectar culturas y lenguas bajo un mismo ecosistema.</p>
+            </article>
+
+            <article class="platform-card reveal">
+              <span class="card-tag">02</span>
+              <h3>Infraestructura</h3>
+              <p>Abierta, simple y potente, con una base pensada para crecer sin perder claridad.</p>
+            </article>
+
+            <article class="platform-card reveal">
+              <span class="card-tag">03</span>
+              <h3>Acción</h3>
+              <p>Una comunidad que entiende la intención detrás del proyecto y la ejecuta con disciplina.</p>
+            </article>
           </div>
         </div>
+      </section>
 
-        <div class="container token-cta reveal">
-          <a class="button button-light" href="TOKENOMICS_ANALYSIS.md">Leer análisis técnico ↗</a>
-          <a class="button button-outline-light" href="https://solscan.io/token/AXjMKnXbXo1LXtdSmrkiDUoZkj9fzwfc5afj79G6o84x" target="_blank" rel="noreferrer">Ver en Solscan ↗</a>
+      <section class="section section-light" id="tokenomics">
+        <div class="container">
+          <div class="center-title reveal">
+            <div class="eyebrow eyebrow-dark">
+              <span></span>
+              Fundamentos
+            </div>
+            <h2>Simple por diseño.<br /><em>Construido para durar.</em></h2>
+            <p>Un modelo transparente con base en claridad, mecanismos definidos y enfoque comunitario.</p>
+          </div>
+
+          <div class="stats-grid reveal">
+            <div class="stat-box">
+              <strong>1B</strong>
+              <span>Total supply</span>
+            </div>
+            <div class="stat-box">
+              <strong>0.0001%</strong>
+              <span>Tax fijo</span>
+            </div>
+            <div class="stat-box">
+              <strong>∞</strong>
+              <span>Potencial</span>
+            </div>
+            <div class="stat-box">
+              <strong>100%</strong>
+              <span>Comunidad</span>
+            </div>
+          </div>
+
+          <div class="token-table-wrap reveal">
+            <table class="token-table">
+              <tr>
+                <th>Supply total</th>
+                <td>1,000,000,000 $LNG</td>
+              </tr>
+              <tr>
+                <th>Red</th>
+                <td>Solana</td>
+              </tr>
+              <tr>
+                <th>Token standard</th>
+                <td>Token-2022</td>
+              </tr>
+              <tr>
+                <th>Mint Authority</th>
+                <td><span class="status success">Renunciada</span></td>
+              </tr>
+              <tr>
+                <th>Freeze Authority</th>
+                <td><span class="status success">Renunciada</span></td>
+              </tr>
+              <tr>
+                <th>Tax fijo</th>
+                <td>0.0001% inmutable</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="token-cta reveal">
+            <a class="button button-dark" href="TOKENOMICS_ANALYSIS.md">Leer análisis técnico ↗</a>
+            <a class="button button-light-outline" href="https://solscan.io/token/AXjMKnXbXo1LXtdSmrkiDUoZkj9fzwfc5afj79G6o84x" target="_blank" rel="noreferrer">Ver en Solscan ↗</a>
+          </div>
         </div>
       </section>
 
@@ -220,7 +287,7 @@
             </div>
             <h2>De las raíces locales<br />a una voz global.</h2>
             <p>
-              Estamos construyendo con intención, claridad y pasos definidos para ofrecer una base sólida a la comunidad y a la visión del proyecto.
+              Estamos construyendo una base sólida, con pasos definidos y una narrativa clara para el crecimiento del ecosistema.
             </p>
           </div>
 
@@ -230,7 +297,7 @@
               <div>
                 <small>01 · AHORA</small>
                 <h3>Fundación</h3>
-                <p>Identidad, documentación, web, comunidad y presencia digital.</p>
+                <p>Identidad, documentación, sitio web, comunidad y presencia pública.</p>
               </div>
             </article>
 
@@ -239,7 +306,7 @@
               <div>
                 <small>02 · SIGUIENTE</small>
                 <h3>Expansión</h3>
-                <p>Más herramientas, onboarding y participación transversal.</p>
+                <p>Más herramientas, participación más amplia y presencia en más idiomas.</p>
               </div>
             </article>
 
@@ -248,7 +315,7 @@
               <div>
                 <small>03 · FUTURO</small>
                 <h3>Impacto</h3>
-                <p>Un ecosistema cultural digital abierto y sostenible a escala global.</p>
+                <p>Un ecosistema cultural digital global con fuertes raíces comunitarias.</p>
               </div>
             </article>
           </div>
@@ -262,14 +329,43 @@
               <span></span>
               Presale
             </div>
-            <h2>Un plan de lanzamiento claro, organizado y transparente.</h2>
+            <h2>Un plan de lanzamiento claro, ordenado y transparente.</h2>
           </div>
 
-          <div class="presale-points">
+          <div class="list-inline">
             <span>Definición de estructura</span>
             <span>Documentación pública</span>
-            <span>Protecciones y cronograma</span>
+            <span>Protecciones</span>
             <span>Comunidad activa</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq-section">
+        <div class="container faq-wrap reveal">
+          <div class="faq-header">
+            <div class="eyebrow eyebrow-dark">
+              <span></span>
+              Preguntas clave
+            </div>
+            <h2>Todo lo que necesitas saber.</h2>
+          </div>
+
+          <div class="faq-grid">
+            <article class="faq-item">
+              <h3>¿Qué es Lingua MemeCoin?</h3>
+              <p>Es un ecosistema digital con enfoque cultural, comunitario y tecnológico, construido sobre Solana.</p>
+            </article>
+
+            <article class="faq-item">
+              <h3>¿Tiene tokenómica clara?</h3>
+              <p>Sí. La tokenómica se define con supply total, tax fijo y mecanismos con autoridad renunciada.</p>
+            </article>
+
+            <article class="faq-item">
+              <h3>¿Es un proyecto serio?</h3>
+              <p>Lo que se busca es transparencia, documentación, disciplina y una base técnica y comunicativa sólida.</p>
+            </article>
           </div>
         </div>
       </section>

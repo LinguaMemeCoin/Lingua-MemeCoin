@@ -6,7 +6,7 @@ if (yearNode) {
   yearNode.textContent = new Date().getFullYear();
 }
 
-if (menuToggle && nav) {
+if (nav && menuToggle) {
   menuToggle.addEventListener('click', () => {
     const isOpen = nav.classList.toggle('open');
     menuToggle.setAttribute('aria-expanded', String(isOpen));
@@ -35,8 +35,8 @@ const observer = new IntersectionObserver(
 
 revealItems.forEach((item) => observer.observe(item));
 
-const links = document.querySelectorAll('a[href^="#"]');
-links.forEach((link) => {
+const anchorLinks = document.querySelectorAll('a[href^="#"]');
+anchorLinks.forEach((link) => {
   link.addEventListener('click', (event) => {
     const targetId = link.getAttribute('href');
     const target = targetId ? document.querySelector(targetId) : null;
