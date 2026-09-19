@@ -2,11 +2,11 @@
 
 ## 1. El Problema: Una Región Fragmentada
 
-América Latina tiene todo:
-- **Idioma compartido** (español como vehículo principal)
-- **Cultura rica y diversa** (desde Chile hasta Canadá)
-- **Valores comunes** (paz, comunidad, inclusión)
-- **Recursos naturales y territoriales** sin igual
+América lo tiene todo:
+- **Idioma compartido** (Español como vehículo principal)
+- **Cultura rica y diversa** (Desde Chile hasta Canadá)
+- **Valores comunes** (Paz,comunidad, inclusión)
+- **Recursos naturales y territoriales** Sin igual
 - **Potencial humano enorme**
 
 Pero nos falta algo fundamental: **UNIDAD DE PROPÓSITO**
@@ -31,11 +31,11 @@ Lingua NO es:
 - ❌ Una imitación de proyectos occidentales
 
 Lingua ES:
-- ✅ Un **espacio comunitario** donde ideas son escuchadas y mejoradas
-- ✅ Una **herramienta de transmisión** que usa blockchain y memecoin
-- ✅ Un **catalizador** para que la región se reconozca a sí misma
-- ✅ Un **vehículo** para revitalizar lenguas y culturas olvidadas
-- ✅ Una **prueba de que es posible** construir algo genuino desde América
+- ✅ Un **espacio comunitario** Donde las ideas son escuchadas y mejoradas
+- ✅ Una **herramienta de transmisión** Blockchain y memecoin
+- ✅ Un **catalizador** Para que la región se reconozca a sí misma
+- ✅ Un **vehículo** Para revitalizar lenguas y culturas olvidadas
+- ✅ Una **prueba de que es posible** Construir algo genuino desde América
 
 ### Ejemplos concretos:
 
@@ -113,17 +113,17 @@ Lingua se construye sobre:
 ### **Distribución de Tokens:**
 
 - ✅ Tokens entregados **el día que salen listados** (sin esperas)
-- ✅ Sin reclamos en páginas dudosas
+- ✅ Sin reclamos en páginas dudosas (Ingresas a la preventa y listo)
 - ✅ Todo rastreable y auditable
 - ✅ Todas las billeteras verificadas
 
 ### **Anti-Especulación:**
 
-- ⛔ 3% máximo por wallet en preventa
-- 🎯 Actividades y sorteos para bloquear ballenas
-- 📈 Precio fijo en preventa ($0.0005) para evitar fluctuaciones
+- ⛔ 3% máximo por wallet en preventa y posiblemente en listado(Comunidad)
+- 🎯 Actividades y sorteos para bloquear ballenas(Manipulacion de precios)
+- 📈 Precio fijo en preventa y listado($0.0005) para evitar fluctuaciones
 - 🔐 40% del suministro bloqueado a 36 meses
-
+- Implementacion de alertas y notificaciones en telegram del avance de preventa
 ---
 
 ## 5. Roadmap (Sin Promesas Falsas)
@@ -158,14 +158,14 @@ Lingua se construye sobre:
 4. Tokens lleguen directamente cuando listemos
 
 ### **Después del Lanzamiento:**
-
+0- Inauracion de la actividad dominical de quema(Deflacion)
 1. Participa en staking (gana recompensas)
 2. Vota en decisiones comunitarias
 3. Crea proyectos usando Lingua
 4. Ayuda a crecer la comunidad
-
----
-
+5. Espacio de cursos gratuitos y donaciones al instructor
+6- Actividades de quema voluntaria
+7- 
 ## 7. Compromiso Anti-Rug Pull
 
 Entendemos la desconfianza. Aquí está por qué confiar:
