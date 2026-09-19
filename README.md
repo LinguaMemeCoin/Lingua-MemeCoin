@@ -1,154 +1,83 @@
-# 🌍 Lingua
+# 🪶 Lingua MemeCoin — Different Cultures. One Lingua.
 
-**Diferentes Culturas, Una Misma Lengua**
+[![Ecosistema - Solana](https://shields.io)](https://solana.com)
+[![Protocolo - Token 2022](https://shields.io)](https://solana.com)
+[![Licencia - MIT](https://shields.io)](LICENSE)
 
-Una plataforma innovadora que une culturas y lenguajes a través de una moneda digital descentralizada. Lingua-MemeCoin es un proyecto comunitario que celebra la diversidad lingüística cultural religiosa mientras crea un ecosistema económico comunitario e inclusivo.
+**Lingua MemeCoin (\$LNG)** es el primer manifiesto de identidad cultural descentralizado construido sobre la red de **Solana**. A diferencia de los proyectos criptográficos convencionales, Lingua nace para convertir el legado lingüístico y la riqueza de las comunidades globales en una estructura de valor digital inmutable, simétrica y transparente.
 
----
-
-## 📖 Tabla de Contenidos
-
-- [Descripción General](#descripción-general)
-- [Características](#características)
-- [Uso](#uso)
-- [Roadmap](#roadmap)
-- [Contribuir](#contribuir)
-- [Licencia](#licencia)
-- [Contacto](#contacto)
+El ecosistema rinde homenaje a las raíces arqueológicas y de conectividad humana, adoptando un diseño minimalista de alta fidelidad inspirado en inscripciones clásicas e integrando un sistema adaptativo que reconoce los orígenes geográficos del usuario.
 
 ---
 
-## 🎯 Descripción General
+## 🏛️ Filosofía y Arquitectura Visual
 
-Lingua-MemeCoin es una iniciativa que combina:
-- 🪙 **Tecnología Blockchain**: Una criptomoneda segura y descentralizada
-- 🗣️ **Multilingüismo**: Soporte para múltiples idiomas y culturas
-- 👥 **Comunidad**: Un ecosistema colaborativo e inclusivo
-- 🎨 **Memes**: La cultura y humor de internet como elemento unificador
+El desarrollo de la plataforma web se cimenta bajo tres pilares fundamentales que eliminan la saturación visual y priorizan la legibilidad:
 
-El proyecto busca democratizar el acceso a las finanzas digitales mientras se celebra la riqueza cultural y lingüística del continente americano.
+* **Estética Mineral:** Un entorno sobrio dominado por tonos obsidiana (`#0d0f12`) y acentos caliza/arena (`#DFD5C6`), alejándose de las paletas neón saturadas del mercado tradicional.
+* **Tipografía Lapidaria:** Integración de proporciones geométricas monumentales basadas en el estilo clásico tallado en piedra, garantizando simetría visual y rendimiento en dispositivos móviles.
+* **Diseño Asimétrico:** Bloques modulares con curvaturas encontradas que emulan la alineación de la arquitectura prehispánica y guían la lectura de forma orgánica.
 
 ---
 
-## ✨ Características
+## 📊 Especificaciones Técnicas (Tokenomics)
 
-### Fase Actual (MVP)
-- [ ] Estructura base del proyecto
-- [ ] Documentación técnica
-- [ ] Configuración del entorno de desarrollo
+Los contratos y autoridades de emisión han sido blindados de origen para asegurar un entorno inmutable gobernado enteramente por la comunidad.
 
-### Próximas Fases
-- [ ] Smart contracts (Solidity/Rust)
-- [ ] Interfaz web (React/Vue)
-- [ ] Wallet integrada
-- [ ] Sistema de gobernanza comunitaria
-- [ ] Soporte multiidioma
-- [ ] Integración de mercados
+| Parámetro Técnico | Especificación de Red | Estado del Mecanismo |
+| :--- | :--- | :--- |
+| **Suministro Total (Supply)** | 1,000,000,000 \$LNG | Fijo / No inflacionario |
+| **Red Principal** | Solana Mainnet-Beta | Despliegue Nativo |
+| **Estándar del Token** | Token-2022 (SPL) | Funcionalidades Extendidas |
+| **Tasa de Transacción (Tax)** | 0.0001% | Inmutable en Código |
+| **Autoridad de Emisión (Mint)** | Renunciada | Imposible crear más tokens |
+| **Autoridad de Bloqueo (Freeze)** | Renunciada | Fondos libres de censura |
 
 ---
 
-## 🚀 Instalación
+## 🦜 Sistema de Identidad Geodinámica
 
-### Requisitos Previos
-- Node.js v16 o superior
-- Git
-- npm o yarn
+La interfaz incluye un módulo autónomo en JavaScript que consulta la geolocalización aproximada del visitante de manera segura (`ipapi.co`). Esto permite ajustar dinámicamente la narrativa de la cabecera según el territorio de origen, asignando un guardián cultural específico:
 
-### Pasos
+* **Honduras (HN) [Base Central]:** *Ara Macao* (Guacamaya Roja Hondureña) — Símbolo de vuelo, colores soberanos y conectividad central.
+* **México (MX):** *Aquila Chrysaetos* (Águila Real) — Representación de la historia, altura y soberanía.
+* **El Salvador / Nicaragua (SV/NI):** *Torogoz / Guardabarranco* — Expresión de libertad y canto tropical.
+* **Región Andina (CO/EC):** *Vultur Gryphus* (Cóndor de los Andes) — Imponencia e interconexión geográfica de altura.
 
-```bash
-# Clonar el repositorio
-git clone https://github.com/LinguaMemeCoin/Lingua-MemeCoin.git
+*Nota: Los usuarios procedentes de regiones fuera del diccionario principal serán recibidos por el guardián de origen (Guacamaya Roja Hondureña).*
 
-# Entrar al directorio
-cd Lingua-MemeCoin
+---
 
-# Instalar dependencias
-npm install
+## ⚙️ Estructura del Repositorio
 
-# (Próximamente) Configurar variables de entorno
-# cp .env.example .env
+El código fuente se mantiene minimalista y libre de dependencias complejas de servidor para asegurar una velocidad de carga óptima y facilidad de despliegue a través de GitHub Pages:
+
+```text
+├── index.html        # Interfaz de usuario (UI) principal con estilos integrados de Tailwind CSS
+└── README.md         # Documentación de arquitectura y tokenómica del ecosistema
 ```
 
 ---
 
-## 💻 Uso
+## 🗺️ Cronograma Arqueológico Digital
 
-(Esta sección se completará cuando el proyecto esté operacional)
+1. **Fase 01: Asentamiento Base (Activo)**
+   * Despliegue de la interfaz web en alta fidelidad y modo mineral.
+   * Publicación de la documentación de código abierto.
+   * Apertura de los primeros círculos de gobernanza comunitaria.
 
-```bash
-# Iniciar el servidor de desarrollo
-npm run dev
-
-# Ejecutar tests
-npm test
-
-# Build para producción
-npm run build
-```
+2. **Fase 02: Interconexión Lingüística (Futuro)**
+   * Integración de la dirección del contrato inteligente definitivo (CA).
+   * Desarrollo de herramientas automatizadas de traducción cultural distribuidas en redes sociales.
+   * Expansión del diccionario geodinámico para abarcar más identidades globales.
 
 ---
 
-## 🗺️ Roadmap
+## ⚖️ Licencia
 
-### Q3 2026
-- ✅ Crear repositorio
-- 📝 Documentación inicial
-- 🏗️ Estructura del proyecto
-- ⚙️ Configuración de desarrollo
+Este proyecto está bajo la Licencia **MIT**. Eres libre de estudiar, modificar y distribuir el código para expandir la innovación abierta dentro del ecosistema descentralizado.
 
-### Q4 2026
-- 🔐 Implementar contratos inteligentes
-- 🌐 Desarrollar interfaz web
-- 👛 Crear wallet básica
-- 🧪 Testing y auditoría
+*Diferentes culturas, una misma lengua.*
 
-### 2027
-- 🚀 Lanzamiento mainnet
-- 💱 Integración con exchanges
-- 🌍 Expansión multilingüe
-- 🤝 Asociaciones comunitarias
 
----
 
-## 🤝 Contribuir
-
-¡Nos encantaría tu contribución! Por favor sigue estos pasos:
-
-### Cómo Contribuir
-
-1. **Fork** el repositorio
-2. **Crea una rama** para tu feature (`git checkout -b feature/AmazingFeature`)
-3. **Commit** tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. **Push** a la rama (`git push origin feature/AmazingFeature`)
-5. **Abre un Pull Request**
-
-### Guías
-- Asegúrate de que el código esté bien documentado
-- Incluye tests para nuevas funcionalidades
-- Sigue el estilo de código del proyecto
-- Lee [CONTRIBUTING.md](./CONTRIBUTING.md) para más detalles (próximamente)
-
----
-
-## 📜 Licencia
-
-Este proyecto está bajo la licencia MIT. Ver archivo [LICENSE](./LICENSE) para más detalles.
-
----
-
-## 📧 Contacto
-
-- **GitHub**: [@LinguaMemeCoin](https://github.com/LinguaMemeCoin)
-- **Issues**: [GitHub Issues](https://github.com/LinguaMemeCoin/Lingua-MemeCoin/issues)
-- **Discussiones**: [GitHub Discussions](https://github.com/LinguaMemeCoin/Lingua-MemeCoin/discussions)
-
----
-
-## 🙏 Agradecimientos
-
-Gracias a todos los colaboradores y a la comunidad global que hace posible este proyecto.
-
----
-
-**Hecho con ❤️ por la comunidad LinguaMemeCoin**
