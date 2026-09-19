@@ -1,8 +1,8 @@
-# 🌍 Lingua-MemeCoin
+# 🌍 Lingua
 
-**Diferentes Culturas, Una Misma Lingua**
+**Diferentes Culturas, Una Misma Lengua**
 
-Una plataforma innovadora que une culturas y lenguajes a través de una moneda digital descentralizada. Lingua-MemeCoin es un proyecto comunitario que celebra la diversidad lingüística mientras crea un ecosistema económico inclusivo.
+Una plataforma innovadora que une culturas y lenguajes a través de una moneda digital descentralizada. Lingua-MemeCoin es un proyecto comunitario que celebra la diversidad lingüística cultural religiosa mientras crea un ecosistema económico comunitario e inclusivo.
 
 ---
 
@@ -10,7 +10,6 @@ Una plataforma innovadora que une culturas y lenguajes a través de una moneda d
 
 - [Descripción General](#descripción-general)
 - [Características](#características)
-- [Instalación](#instalación)
 - [Uso](#uso)
 - [Roadmap](#roadmap)
 - [Contribuir](#contribuir)
@@ -27,7 +26,7 @@ Lingua-MemeCoin es una iniciativa que combina:
 - 👥 **Comunidad**: Un ecosistema colaborativo e inclusivo
 - 🎨 **Memes**: La cultura y humor de internet como elemento unificador
 
-El proyecto busca democratizar el acceso a las finanzas digitales mientras se celebra la riqueza cultural y lingüística del mundo.
+El proyecto busca democratizar el acceso a las finanzas digitales mientras se celebra la riqueza cultural y lingüística del continente americano.
 
 ---
 
