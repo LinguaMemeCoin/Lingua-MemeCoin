@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lingua MemeCoin | One Lingua</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://tailwindcss.com"></script>
+    
+    <!-- Enlace oficial y seguro de producción para los estilos visuales -->
+    <link href="https://cloudflare.com" rel="stylesheet">
+    
     <!-- Fuentes de Google: Cinzel y Plus Jakarta Sans -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
@@ -22,13 +24,18 @@
         .mineral-glow {
             box-shadow: inset 0 1px 0 0 rgba(223, 213, 198, 0.05), 0 4px 30px rgba(0, 0, 0, 0.5);
         }
+        /* Ajuste de compatibilidad para colores personalizados */
+        .bg-obsidiana { background-color: #0d0f12; }
+        .bg-mineral { background-color: #13161c; }
+        .text-arena { color: #DFD5C6; }
+        .border-arena { border-color: #1d212a; }
     </style>
 </head>
-<body class="text-gray-400 min-h-screen antialiased selection:bg-[#DFD5C6] selection:text-[#0d0f12]">
+<body class="bg-obsidiana text-gray-400 min-h-screen antialiased">
 
     <!-- SALUDO GEOLOCALIZADO DINÁMICO -->
-    <div id="banner-bienvenida" class="bg-[#15120e] border-b border-[#2d2720] px-6 py-2.5 text-center hidden">
-        <p class="font-maya text-[10px] tracking-[0.25em] text-[#C4B5A1] uppercase flex items-center justify-center gap-2">
+    <div id="banner-bienvenida" class="bg-mineral border-b border-arena px-6 py-2 text-center hidden">
+        <p class="font-maya text-xs tracking-widest text-arena uppercase flex items-center justify-center gap-2">
             <span id="saludo-icono">🪶</span>
             <span id="saludo-texto">Conectando desde los orígenes</span>
             <span id="bandera-pais" class="text-sm"></span>
@@ -36,124 +43,127 @@
     </div>
 
     <!-- BARRA DE NAVEGACIÓN -->
-    <nav class="border-b border-[#1b1e24] bg-[#0d0f12]/80 backdrop-blur-md sticky top-0 z-50 px-6 py-4">
+    <nav class="border-b border-arena bg-obsidiana sticky top-0 z-50 px-6 py-4">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
             <div class="flex items-center gap-3">
                 <span id="nav-mascota-icono" class="text-xl">🦜</span>
-                <div class="text-lg font-black tracking-[0.3em] font-maya text-[#DFD5C6]">L LINGUA</div>
+                <div class="text-lg font-black tracking-widest font-maya text-arena">L LINGUA</div>
             </div>
-            <div class="flex space-x-8 text-[10px] font-maya tracking-[0.2em] uppercase">
-                <a href="#mascota" class="hover:text-[#DFD5C6] text-gray-500 transition-colors duration-300">Mascota</a>
-                <a href="#comprar" class="hover:text-[#DFD5C6] text-gray-500 transition-colors duration-300">Comprar</a>
-                <a href="#idea" class="hover:text-[#DFD5C6] text-gray-500 transition-colors duration-300">La Idea</a>
-                <a href="#tokenomics" class="hover:text-[#DFD5C6] text-gray-500 transition-colors duration-300">Tokenomics</a>
+            <div class="flex space-x-6 text-xs font-maya tracking-wider uppercase">
+                <a href="#mascota" class="text-gray-500 hover:text-arena">Mascota</a>
+                <a href="#comprar" class="text-gray-500 hover:text-arena">Comprar</a>
+                <a href="#idea" class="text-gray-500 hover:text-arena">La Idea</a>
+                <a href="#tokenomics" class="text-gray-500 hover:text-arena">Tokenomics</a>
             </div>
         </div>
     </nav>
 
-    <!-- SECCIÓN DE IMPACTO (HERO) -->
-    <header class="max-w-5xl mx-auto text-center py-24 px-6 relative overflow-hidden">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#DFD5C6]/5 rounded-full blur-[120px] pointer-events-none"></div>
-
-        <span class="inline-block border border-[#2d2720] bg-[#15120e] text-[#C4B5A1] text-[9px] font-maya tracking-[0.3em] px-5 py-2 rounded-sm uppercase mb-8">
+    <!-- SECCIÓN PRINCIPAL (HERO) -->
+    <header class="max-w-5xl mx-auto text-center py-20 px-6 relative overflow-hidden">
+        <span class="inline-block border border-arena bg-mineral text-arena text-xs font-maya tracking-widest px-4 py-1.5 rounded uppercase mb-8">
             Ecosistema Abierto · Solana
         </span>
         
-        <!-- CONTENEDOR DE LA MASCOTA OFICIAL DINÁMICA -->
-        <div id="mascota" class="mb-10 relative inline-block group">
-            <div class="absolute inset-0 bg-[#DFD5C6]/10 rounded-full blur-xl group-hover:bg-[#DFD5C6]/20 transition-all duration-500"></div>
-            <div class="w-32 h-32 md:w-40 md:h-40 rounded-full border-2 border-[#2d2720] bg-[#13161c] p-2 relative z-10 flex items-center justify-center overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-105">
+        <!-- MASCOTA OFICIAL DINÁMICA -->
+        <div id="mascota" class="mb-10 relative inline-block">
+            <div class="w-32 h-32 md:w-40 md:h-40 rounded-full border-2 border-arena bg-mineral p-2 relative z-10 flex items-center justify-center overflow-hidden shadow-2xl">
                 <img id="mascota-img" 
                      src="https://unsplash.com" 
                      alt="Mascota Oficial de Lingua" 
-                     class="w-full h-full object-cover rounded-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
+                     class="w-full h-full object-cover rounded-full opacity-70">
             </div>
-            <div id="mascota-etiqueta" class="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-[#15120e] border border-[#3e352b] text-[#C4B5A1] font-maya text-[8px] tracking-widest px-3 py-1 rounded uppercase z-20 whitespace-nowrap shadow-md">
+            <div id="mascota-etiqueta" class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-obsidiana border border-arena text-arena font-maya text-xs tracking-widest px-3 py-1 rounded uppercase z-20 whitespace-nowrap shadow-md">
                 Ara Macao · Mascota Oficial
             </div>
         </div>
         
-        <h1 class="text-4xl md:text-6xl font-black text-[#DFD5C6] mb-8 tracking-[0.05em] font-maya leading-[1.15]">
+        <h1 class="text-4xl md:text-5xl font-black text-arena mb-6 tracking-wide font-maya leading-tight">
             Different cultures.<br>
             <span class="text-gray-600 font-medium">One Lingua.</span>
         </h1>
         
-        <p id="hero-descripcion" class="text-base text-gray-500 max-w-2xl mx-auto mb-12 leading-relaxed font-light">
+        <p id="hero-descripcion" class="text-base text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">
             El primer manifiesto de identidad cultural en Solana. Inspirado en el vuelo y herencia de la Guacamaya Roja Hondureña, enlazamos el legado lingüístico global mediante tecnología criptográfica.
         </p>
         
-        <div class="flex flex-col sm:flex-row justify-center gap-4 text-[10px] font-maya tracking-[0.25em] uppercase">
-            <a href="#comprar" class="bg-[#DFD5C6] text-[#0d0f12] font-bold px-10 py-4 rounded-tl-xl rounded-br-xl hover:bg-[#C4B5A1] transition-all duration-300 shadow-xl hover:scale-[1.02]">
+        <div class="flex flex-col sm:flex-row justify-center gap-4 text-xs font-maya tracking-widest uppercase">
+            <a href="#comprar" class="bg-arena text-black font-bold px-8 py-3 rounded hover:bg-white transition shadow-xl">
                 Adquirir $LNG
             </a>
-            <a href="#idea" class="border border-[#232730] hover:border-gray-600 text-gray-400 px-10 py-4 rounded-tr-xl rounded-bl-xl transition-all duration-300 backdrop-blur-sm">
+            <a href="#idea" class="border border-arena text-gray-400 px-8 py-3 rounded hover:border-gray-500 transition">
                 Descubrir Visión
             </a>
         </div>
     </header>
 
-    <!-- CUADROS DE MÉTRICAS AVANZADAS -->
-    <section class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 px-6 mb-24 text-center font-maya tracking-widest relative z-10">
-        <div class="bg-[#13161c]/60 border border-[#1d212a] mineral-glow p-6 rounded-tl-xl rounded-br-xl">
+    <!-- CUADROS DE MÉTRICAS -->
+    <section class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 px-6 mb-20 text-center font-maya tracking-wider">
+        <div class="bg-mineral border border-arena p-5 rounded">
             <div class="text-xs text-gray-600 uppercase mb-1">Supply Total</div>
-            <div class="text-xl font-bold text-[#DFD5C6]">1,000,000,000</div>
+            <div class="text-lg font-bold text-arena">1,000,000,000</div>
         </div>
-        <div class="bg-[#13161c]/60 border border-[#1d212a] mineral-glow p-6 rounded-tr-xl rounded-bl-xl">
+        <div class="bg-mineral border border-arena p-5 rounded">
             <div class="text-xs text-gray-600 uppercase mb-1">Red Base</div>
-            <div class="text-xl font-bold text-gray-300">SOLANA</div>
+            <div class="text-lg font-bold text-gray-300">SOLANA</div>
         </div>
-        <div class="bg-[#13161c]/60 border border-[#1d212a] mineral-glow p-6 rounded-tl-xl rounded-br-xl">
+        <div class="bg-mineral border border-arena p-5 rounded">
             <div class="text-xs text-gray-600 uppercase mb-1">Tax Fijo</div>
-            <div class="text-xl font-bold text-gray-300">0.0001%</div>
+            <div class="text-lg font-bold text-gray-300">0.0001%</div>
         </div>
-        <div class="bg-[#13161c]/60 border border-[#1d212a] mineral-glow p-6 rounded-tr-xl rounded-bl-xl">
+        <div class="bg-mineral border border-arena p-5 rounded">
             <div class="text-xs text-gray-600 uppercase mb-1">Estructura</div>
-            <div class="text-xl font-bold text-[#DFD5C6]">100% COMUNIDAD</div>
+            <div class="text-lg font-bold text-arena">100% COMUNIDAD</div>
         </div>
     </section>
 
-    <!-- CÓMO COMPRAR $LNG -->
-    <section id="comprar" class="max-w-5xl mx-auto py-16 px-6 mb-32 border-t border-[#16191f]">
-        <h2 class="text-xl md:text-2xl font-bold text-[#DFD5C6] text-center mb-2 font-maya tracking-[0.2em] uppercase">
+    <!-- INSTRUCCIONES DE COMPRA -->
+    <section id="comprar" class="max-w-5xl mx-auto py-12 px-6 mb-20 border-t border-arena">
+        <h2 class="text-xl md:text-2xl font-bold text-arena text-center mb-2 font-maya tracking-wider uppercase">
             Instrucciones de Adquisición
         </h2>
-        <p class="text-[9px] text-gray-600 text-center mb-16 font-maya tracking-[0.25em] uppercase">
+        <p class="text-xs text-gray-600 text-center mb-12 font-maya tracking-widest uppercase">
             Sigue los pasos esenciales en la red Solana
         </p>
 
-        <div class="grid md:grid-cols-3 gap-6 font-light">
-            <div class="bg-[#13161c]/40 border border-[#1d212a] p-8 rounded-tl-xl rounded-br-xl mineral-glow">
-                <div class="font-maya text-[#C4B5A1] text-xs tracking-widest mb-4 border-b border-[#1d212a] pb-2 flex justify-between">
-                    <span>PASO 01</span>
-                    <span>🪶</span>
-                </div>
-                <h3 class="font-maya text-[#DFD5C6] text-sm tracking-wider mb-3">Preparar Billetera</h3>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-mineral border border-arena p-6 rounded shadow-xl">
+                <div class="font-maya text-arena text-xs tracking-widest mb-3 border-b border-arena pb-2">PASO 01</div>
+                <h3 class="font-maya text-arena text-sm font-bold mb-2">Preparar Billetera</h3>
                 <p class="text-xs text-gray-500 leading-relaxed">
-                    Descarga una extensión o aplicación Web3 compatible con Solana como <strong>Phantom</strong> o <strong>Solflare</strong>. Resguarda de forma segura tu clave semilla de recuperación.
+                    Descarga una extensión o aplicación Web3 compatible con Solana como Phantom o Solflare. Resguarda de forma segura tu clave semilla de recuperación.
                 </p>
             </div>
-            <div class="bg-[#13161c]/40 border border-[#1d212a] p-8 rounded-xl mineral-glow">
-                <div class="font-maya text-[#C4B5A1] text-xs tracking-widest mb-4 border-b border-[#1d212a] pb-2 flex justify-between">
-                    <span>PASO 02</span>
-                    <span>🪙</span>
-                </div>
-                <h3 class="font-maya text-[#DFD5C6] text-sm tracking-wider mb-3">Fondear con SOL</h3>
+            <div class="bg-mineral border border-arena p-6 rounded shadow-xl">
+                <div class="font-maya text-arena text-xs tracking-widest mb-3 border-b border-arena pb-2">PASO 02</div>
+                <h3 class="font-maya text-arena text-sm font-bold mb-2">Fondear con SOL</h3>
                 <p class="text-xs text-gray-500 leading-relaxed">
                     Adquiere fondos de Solana (SOL) en tu casa de cambio de preferencia y envíalos directamente a la dirección pública de tu nueva billetera descentralizada.
                 </p>
             </div>
-            <div class="bg-[#13161c]/40 border border-[#1d212a] p-8 rounded-tr-xl rounded-bl-xl mineral-glow">
-                <div class="font-maya text-[#C4B5A1] text-xs tracking-widest mb-4 border-b border-[#1d212a] pb-2 flex justify-between">
-                    <span>PASO 03</span>
-                    <span>🔄</span>
-                </div>
-                <h3 class="font-maya text-[#DFD5C6] text-sm tracking-wider mb-3">Intercambiar por $LNG</h3>
+            <div class="bg-mineral border border-arena p-6 rounded shadow-xl">
+                <div class="font-maya text-arena text-xs tracking-widest mb-3 border-b border-arena pb-2">PASO 03</div>
+                <h3 class="font-maya text-arena text-sm font-bold mb-2">Intercambiar por $LNG</h3>
                 <p class="text-xs text-gray-500 leading-relaxed">
-                    Conecta tu billetera a un agregador descentralizado (como <strong>Jupiter</strong> o <strong>Raydium</strong>). Introduce la dirección del contrato oficial de Lingua e intercambia tus SOL por <strong>$LNG</strong>.
+                    Conecta tu billetera a un agregador descentralizado (como Jupiter o Raydium). Introduce la dirección del contrato oficial de Lingua e intercambia tus SOL por $LNG.
                 </p>
             </div>
         </div>
     </section>
 
     <!-- LA IDEA -->
-    <section id="idea" class="max-w-5xl mx-auto py-16 px-6 mb-32 border-t border-[#16191f]">
+    <section id="idea" class="max-w-5xl mx-auto py-12 px-6 mb-20 border-t border-arena">
+        <h2 class="text-xl md:text-2xl font-bold text-arena text-center mb-12 font-maya tracking-wider uppercase">
+            La tecnología también puede ser <span class="text-gray-600">humana</span>
+        </h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-mineral border border-arena p-6 rounded relative overflow-hidden">
+                <div class="text-gray-600 font-maya text-xs tracking-widest mb-2">01 / CULTURA</div>
+                <h3 class="text-base font-bold text-arena mb-3 font-maya">Diversidad sin fricciones</h3>
+                <p class="text-xs text-gray-500 leading-relaxed">
+                    Transformamos la pluralidad lingüística en valor criptográfico estable. Protegemos el conocimiento ancestral y las voces comunitarias dentro de bloques inmutables de código abierto.
+                </p>
+            </div>
+            <div class="bg-mineral border border-arena p-6 rounded relative overflow-hidden">
+                <div class="text-gray-600 font-maya text-xs tracking-widest mb-2">02 / GOBERNANZA</div>
+                <h3 class="text-base font-bold text-arena mb-3 font-maya">Espacio Simétrico</h3>
+                <p class="text-xs text-gray-500 leading-relaxed">
