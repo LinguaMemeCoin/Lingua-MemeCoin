@@ -1,207 +1,13 @@
 const translations = {
   es: {
-    'nav.vision': 'Visión',
-    'nav.platform': 'Plataforma',
-    'nav.tokenomics': 'Tokenomics',
-    'nav.roadmap': 'Roadmap',
-    'nav.presale': 'Presale',
-    'nav.faq': 'FAQ',
-    'nav.docs': 'Docs',
-    'header.token': 'Ver token',
-    'hero.eyebrow': 'Ecosistema abierto · Solana',
-    'hero.titleLine1': 'Culturas distintas.',
-    'hero.titleLine2': 'Una misma lengua.',
-    'hero.lead': 'Lingua MemeCoin es una comunidad global construida alrededor de la diversidad cultural, la innovación abierta y la conexión entre personas, ideas y tecnologías.',
-    'hero.primaryCta': 'Explorar $LNG',
-    'hero.secondaryCta': 'Descubrir visión',
-    'hero.pill1': '1B de suministro',
-    'hero.pill2': 'Solana',
-    'hero.pill3': 'Código abierto',
-    'hero.pill4': 'Comunidad primero',
-    'hero.cardTitle': 'Ecosistema activo',
-    'hero.cardSubtitle': 'Red Solana',
-    'ticker.supply': '1B DE SUMINISTRO',
-    'ticker.open': 'CÓDIGO ABIERTO',
-    'ticker.supply2': '1B DE SUMINISTRO',
-    'ticker.open2': 'CÓDIGO ABIERTO',
-    'vision.eyebrow': 'La idea',
-    'vision.title': 'La tecnología también puede ser <em>humana.</em>',
-    'vision.p1': 'Lingua MemeCoin nace para convertir la diversidad cultural y lingüística en una nueva capa de valor digital: compartida, abierta y construida en comunidad.',
-    'vision.p2': 'No es solo una pieza financiera, sino una estructura de identidad, colaboración e innovación abierta pensada para conectar pueblos, lenguas y recursos de manera real.',
-    'vision.link': 'Leer nuestra visión ↗',
-    'vision.card1.title': 'Cultura',
-    'vision.card1.text': 'La diversidad lingüística como fuerza de creatividad, pertenencia y conexión global.',
-    'vision.card2.title': 'Comunidad',
-    'vision.card2.text': 'Un espacio abierto donde cada persona puede participar, aportar y crecer.',
-    'vision.image.label': 'Muchas voces',
-    'vision.image.title': 'Una comunidad',
-    'vision.image.alt': 'Diversidad cultural y comunidad',
-    'platform.eyebrow': '¿Qué representa?',
-    'platform.title': 'Una plataforma cultural con estructura digital.',
-    'platform.card1.title': 'Identidad',
-    'platform.card1.text': 'Se construye sobre la idea de conectar culturas y lenguas bajo un mismo ecosistema.',
-    'platform.card2.title': 'Infraestructura',
-    'platform.card2.text': 'Abierta, simple y potente, con una base pensada para crecer sin perder claridad.',
-    'platform.card3.title': 'Acción',
-    'platform.card3.text': 'Una comunidad que entiende la intención detrás del proyecto y la ejecuta con disciplina.',
-    'tokenomics.eyebrow': 'Fundamentos',
-    'tokenomics.title': 'Simple por diseño.<br><em>Construido para durar.</em>',
-    'tokenomics.subtitle': 'Un modelo transparente basado en la claridad, mecanismos definidos y un enfoque comunitario.',
-    'stats.supply': 'Suministro total',
-    'stats.tax': 'Impuesto fijo',
-    'stats.potential': 'Potencial',
-    'stats.community': 'Comunidad',
-    'table.supplyTitle': 'Suministro total',
-    'table.supplyText': '1,000,000,000 $LNG',
-    'table.networkTitle': 'Red',
-    'table.networkText': 'Solana',
-    'table.standardTitle': 'Estándar del token',
-    'table.standardText': 'Token-2022',
-    'table.mintTitle': 'Autoridad de mint',
-    'table.mintText': 'Renunciada',
-    'table.freezeTitle': 'Autoridad de freeze',
-    'table.freezeText': 'Renunciada',
-    'table.taxTitle': 'Impuesto fijo',
-    'table.taxText': '0.0001% inmutable',
-    'tokenomics.link1': 'Leer análisis técnico ↗',
-    'tokenomics.link2': 'Ver en Solscan ↗',
-    'roadmap.eyebrow': 'Camino',
-    'roadmap.title': 'De las raíces locales<br />a una voz global.',
-    'roadmap.text': 'Estamos construyendo una base sólida con pasos definidos y una narrativa clara para el crecimiento del ecosistema.',
-    'roadmap.phase1.tag': '01 · AHORA',
-    'roadmap.phase1.title': 'Fundación',
-    'roadmap.phase1.text': 'Identidad, documentación, sitio web, comunidad y presencia pública.',
-    'roadmap.phase2.tag': '02 · SIGUIENTE',
-    'roadmap.phase2.title': 'Expansión',
-    'roadmap.phase2.text': 'Más herramientas, mayor participación y mayor presencia en más idiomas.',
-    'roadmap.phase3.tag': '03 · FUTURO',
-    'roadmap.phase3.title': 'Impacto',
-    'roadmap.phase3.text': 'Un ecosistema cultural digital global con raíces comunitarias sólidas.',
-    'presale.eyebrow': 'Presale',
-    'presale.title': 'Un plan de lanzamiento claro, ordenado y transparente.',
-    'presale.item1': 'Definición de estructura',
-    'presale.item2': 'Documentación pública',
-    'presale.item3': 'Protecciones',
-    'presale.item4': 'Comunidad activa',
-    'faq.eyebrow': 'Preguntas clave',
-    'faq.title': 'Todo lo que necesitas saber.',
-    'faq.q1.title': '¿Qué es Lingua MemeCoin?',
-    'faq.q1.text': 'Es un ecosistema digital con enfoque cultural, comunitario y tecnológico, construido sobre Solana.',
-    'faq.q2.title': '¿Tiene tokenómica clara?',
-    'faq.q2.text': 'Sí. La tokenómica se define con suministro total, impuesto fijo y mecanismos con autoridad renunciada.',
-    'faq.q3.title': '¿Es un proyecto serio?',
-    'faq.q3.text': 'Lo que se busca es transparencia, documentación, disciplina y una base técnica y comunicativa sólida.',
-    'footer.tagline': 'Diferentes culturas, una misma lengua.',
-    'footer.docs': 'Docs',
-    'footer.bottom': 'Hecho con intención.',
-    'aria.brand': 'Lingua MemeCoin inicio',
-    'aria.menu': 'Abrir menú',
-    'aria.nav': 'Navegación principal',
-    'aria.language': 'Selector de idioma',
-    'aria.ticker': 'Datos clave del proyecto',
-    'aria.footerBrand': 'Lingua MemeCoin pie de página'
+    'nav.vision': 'Visión', 'nav.platform': 'Plataforma', 'nav.tokenomics': 'Tokenomics', 'nav.roadmap': 'Roadmap', 'nav.presale': 'Presale', 'nav.faq': 'FAQ', 'nav.docs': 'Docs', 'header.token': 'Ver token',
+    'hero.eyebrow': 'Ecosistema abierto · Solana', 'hero.titleLine1': 'Culturas distintas.', 'hero.titleLine2': 'Una misma lengua.', 'hero.lead': 'Lingua MemeCoin es una comunidad global construida alrededor de la diversidad cultural, la innovación abierta y la conexión entre personas, ideas y tecnologías.', 'hero.primaryCta': 'Explorar $LNG', 'hero.secondaryCta': 'Descubrir visión', 'hero.pill1': '1B de suministro', 'hero.pill2': 'Solana', 'hero.pill3': 'Código abierto', 'hero.pill4': 'Comunidad primero', 'hero.cardTitle': 'Ecosistema activo', 'hero.cardSubtitle': 'Red Solana',
+    'ticker.supply': '1B DE SUMINISTRO', 'ticker.open': 'CÓDIGO ABIERTO', 'ticker.supply2': '1B DE SUMINISTRO', 'ticker.open2': 'CÓDIGO ABIERTO', 'vision.eyebrow': 'La idea', 'vision.title': 'La tecnología también puede ser <em>humana.</em>', 'vision.p1': 'Lingua MemeCoin nace para convertir la diversidad cultural y lingüística en una nueva capa de valor digital: compartida, abierta y construida en comunidad.', 'vision.p2': 'No es solo una pieza financiera, sino una estructura de identidad, colaboración e innovación abierta pensada para conectar pueblos, lenguas y recursos de manera real.', 'vision.link': 'Leer nuestra visión ↗', 'vision.card1.title': 'Cultura', 'vision.card1.text': 'La diversidad lingüística como fuerza de creatividad, pertenencia y conexión global.', 'vision.card2.title': 'Comunidad', 'vision.card2.text': 'Un espacio abierto donde cada persona puede participar, aportar y crecer.', 'vision.image.label': 'Muchas voces', 'vision.image.title': 'Una comunidad', 'vision.image.alt': 'Diversidad cultural y comunidad',
+    'platform.eyebrow': '¿Qué representa?', 'platform.title': 'Una plataforma cultural con estructura digital.', 'platform.card1.title': 'Identidad', 'platform.card1.text': 'Se construye sobre la idea de conectar culturas y lenguas bajo un mismo ecosistema.', 'platform.card2.title': 'Infraestructura', 'platform.card2.text': 'Abierta, simple y potente, con una base pensada para crecer sin perder claridad.', 'platform.card3.title': 'Acción', 'platform.card3.text': 'Una comunidad que entiende la intención detrás del proyecto y la ejecuta con disciplina.', 'tokenomics.eyebrow': 'Fundamentos', 'tokenomics.title': 'Simple por diseño.<br><em>Construido para durar.</em>', 'tokenomics.subtitle': 'Un modelo transparente basado en la claridad, mecanismos definidos y un enfoque comunitario.', 'stats.supply': 'Suministro total', 'stats.tax': 'Impuesto fijo', 'stats.potential': 'Potencial', 'stats.community': 'Comunidad', 'table.supplyTitle': 'Suministro total', 'table.supplyText': '1,000,000,000 $LNG', 'table.networkTitle': 'Red', 'table.networkText': 'Solana', 'table.standardTitle': 'Estándar del token', 'table.standardText': 'Token-2022', 'table.mintTitle': 'Autoridad de mint', 'table.mintText': 'Renunciada', 'table.freezeTitle': 'Autoridad de freeze', 'table.freezeText': 'Renunciada', 'table.taxTitle': 'Impuesto fijo', 'table.taxText': '0.0001% inmutable', 'tokenomics.link1': 'Leer análisis técnico ↗', 'tokenomics.link2': 'Ver en Solscan ↗',
+    'roadmap.eyebrow': 'Camino', 'roadmap.title': 'De las raíces locales<br />a una voz global.', 'roadmap.text': 'Estamos construyendo una base sólida con pasos definidos y una narrativa clara para el crecimiento del ecosistema.', 'roadmap.phase1.tag': '01 · AHORA', 'roadmap.phase1.title': 'Fundación', 'roadmap.phase1.text': 'Identidad, documentación, sitio web, comunidad y presencia pública.', 'roadmap.phase2.tag': '02 · SIGUIENTE', 'roadmap.phase2.title': 'Expansión', 'roadmap.phase2.text': 'Más herramientas, mayor participación y mayor presencia en más idiomas.', 'roadmap.phase3.tag': '03 · FUTURO', 'roadmap.phase3.title': 'Impacto', 'roadmap.phase3.text': 'Un ecosistema cultural digital global con raíces comunitarias sólidas.', 'presale.eyebrow': 'Presale', 'presale.title': 'Un plan de lanzamiento claro, ordenado y transparente.', 'presale.item1': 'Definición de estructura', 'presale.item2': 'Documentación pública', 'presale.item3': 'Protecciones', 'presale.item4': 'Comunidad activa', 'faq.eyebrow': 'Preguntas clave', 'faq.title': 'Todo lo que necesitas saber.', 'faq.q1.title': '¿Qué es Lingua MemeCoin?', 'faq.q1.text': 'Es un ecosistema digital con enfoque cultural, comunitario y tecnológico, construido sobre Solana.', 'faq.q2.title': '¿Tiene tokenómica clara?', 'faq.q2.text': 'Sí. La tokenómica se define con suministro total, impuesto fijo y mecanismos con autoridad renunciada.', 'faq.q3.title': '¿Es un proyecto serio?', 'faq.q3.text': 'Lo que se busca es transparencia, documentación, disciplina y una base técnica y comunicativa sólida.', 'footer.tagline': 'Diferentes culturas, una misma lengua.', 'footer.docs': 'Docs', 'footer.bottom': 'Hecho con intención.', 'aria.brand': 'Lingua MemeCoin inicio', 'aria.menu': 'Abrir menú', 'aria.nav': 'Navegación principal', 'aria.language': 'Selector de idioma', 'aria.ticker': 'Datos clave del proyecto', 'aria.footerBrand': 'Lingua MemeCoin pie de página'
   },
   en: {
-    'nav.vision': 'Vision',
-    'nav.platform': 'Platform',
-    'nav.tokenomics': 'Tokenomics',
-    'nav.roadmap': 'Roadmap',
-    'nav.presale': 'Presale',
-    'nav.faq': 'FAQ',
-    'nav.docs': 'Docs',
-    'header.token': 'View token',
-    'hero.eyebrow': 'Open ecosystem · Solana',
-    'hero.titleLine1': 'Different cultures.',
-    'hero.titleLine2': 'One Lingua.',
-    'hero.lead': 'Lingua MemeCoin is a global community built around cultural diversity, open innovation, and connection between people, ideas, and technologies.',
-    'hero.primaryCta': 'Explore $LNG',
-    'hero.secondaryCta': 'Discover vision',
-    'hero.pill1': '1B supply',
-    'hero.pill2': 'Solana',
-    'hero.pill3': 'Open source',
-    'hero.pill4': 'Community first',
-    'hero.cardTitle': 'Live ecosystem',
-    'hero.cardSubtitle': 'Solana network',
-    'ticker.supply': '1B TOTAL SUPPLY',
-    'ticker.open': 'OPEN SOURCE',
-    'ticker.supply2': '1B TOTAL SUPPLY',
-    'ticker.open2': 'OPEN SOURCE',
-    'vision.eyebrow': 'The idea',
-    'vision.title': 'Technology can also be <em>human.</em>',
-    'vision.p1': 'Lingua MemeCoin was created to turn cultural and linguistic diversity into a new layer of digital value: shared, open, and built in community.',
-    'vision.p2': 'It is not just a financial asset, but a structure of identity, collaboration, and open innovation designed to connect people, languages, and resources in a meaningful way.',
-    'vision.link': 'Read our vision ↗',
-    'vision.card1.title': 'Culture',
-    'vision.card1.text': 'Linguistic diversity as a force for creativity, belonging, and global connection.',
-    'vision.card2.title': 'Community',
-    'vision.card2.text': 'An open space where everyone can participate, contribute, and grow.',
-    'vision.image.label': 'Many voices',
-    'vision.image.title': 'One community',
-    'vision.image.alt': 'Cultural diversity and community',
-    'platform.eyebrow': 'What does it represent?',
-    'platform.title': 'A cultural platform with a digital structure.',
-    'platform.card1.title': 'Identity',
-    'platform.card1.text': 'Built around the idea of connecting cultures and languages under one ecosystem.',
-    'platform.card2.title': 'Infrastructure',
-    'platform.card2.text': 'Open, simple, and powerful, with a base designed to grow without losing clarity.',
-    'platform.card3.title': 'Action',
-    'platform.card3.text': 'A community that understands the project’s intent and executes it with discipline.',
-    'tokenomics.eyebrow': 'Foundation',
-    'tokenomics.title': 'Simple by design.<br><em>Built to last.</em>',
-    'tokenomics.subtitle': 'A transparent model grounded in clarity, defined mechanisms, and a community-first approach.',
-    'stats.supply': 'Total supply',
-    'stats.tax': 'Fixed tax',
-    'stats.potential': 'Potential',
-    'stats.community': 'Community',
-    'table.supplyTitle': 'Total supply',
-    'table.supplyText': '1,000,000,000 $LNG',
-    'table.networkTitle': 'Network',
-    'table.networkText': 'Solana',
-    'table.standardTitle': 'Token standard',
-    'table.standardText': 'Token-2022',
-    'table.mintTitle': 'Mint authority',
-    'table.mintText': 'Renounced',
-    'table.freezeTitle': 'Freeze authority',
-    'table.freezeText': 'Renounced',
-    'table.taxTitle': 'Fixed tax',
-    'table.taxText': '0.0001% immutable',
-    'tokenomics.link1': 'Read technical analysis ↗',
-    'tokenomics.link2': 'View on Solscan ↗',
-    'roadmap.eyebrow': 'Journey',
-    'roadmap.title': 'From local roots<br />to a global voice.',
-    'roadmap.text': 'We are building a solid foundation with clear steps and a strong narrative for the ecosystem’s growth.',
-    'roadmap.phase1.tag': '01 · NOW',
-    'roadmap.phase1.title': 'Foundation',
-    'roadmap.phase1.text': 'Identity, documentation, website, community, and public presence.',
-    'roadmap.phase2.tag': '02 · NEXT',
-    'roadmap.phase2.title': 'Expansion',
-    'roadmap.phase2.text': 'More tools, broader participation, and a stronger presence across languages.',
-    'roadmap.phase3.tag': '03 · FUTURE',
-    'roadmap.phase3.title': 'Impact',
-    'roadmap.phase3.text': 'A global digital cultural ecosystem with strong community roots.',
-    'presale.eyebrow': 'Presale',
-    'presale.title': 'A launch plan that is clear, organized, and transparent.',
-    'presale.item1': 'Structure definition',
-    'presale.item2': 'Public documentation',
-    'presale.item3': 'Protection measures',
-    'presale.item4': 'Active community',
-    'faq.eyebrow': 'Key questions',
-    'faq.title': 'Everything you need to know.',
-    'faq.q1.title': 'What is Lingua MemeCoin?',
-    'faq.q1.text': 'It is a digital ecosystem with a cultural, community, and technological focus, built on Solana.',
-    'faq.q2.title': 'Does it have clear tokenomics?',
-    'faq.q2.text': 'Yes. Tokenomics are defined with total supply, fixed tax, and mechanisms with renounced authority.',
-    'faq.q3.title': 'Is it a serious project?',
-    'faq.q3.text': 'The goal is transparency, documentation, discipline, and a solid technical and communicative foundation.',
-    'footer.tagline': 'Different cultures, one same language.',
-    'footer.docs': 'Docs',
-    'footer.bottom': 'Made with intention.',
-    'aria.brand': 'Lingua MemeCoin home',
-    'aria.menu': 'Open menu',
-    'aria.nav': 'Main navigation',
-    'aria.language': 'Language selector',
-    'aria.ticker': 'Key project information',
-    'aria.footerBrand': 'Lingua MemeCoin footer'
+    'nav.vision': 'Vision', 'nav.platform': 'Platform', 'nav.tokenomics': 'Tokenomics', 'nav.roadmap': 'Roadmap', 'nav.presale': 'Presale', 'nav.faq': 'FAQ', 'nav.docs': 'Docs', 'header.token': 'View token', 'hero.eyebrow': 'Open ecosystem · Solana', 'hero.titleLine1': 'Different cultures.', 'hero.titleLine2': 'One Lingua.', 'hero.lead': 'Lingua MemeCoin is a global community built around cultural diversity, open innovation, and connection between people, ideas, and technologies.', 'hero.primaryCta': 'Explore $LNG', 'hero.secondaryCta': 'Discover vision', 'hero.pill1': '1B supply', 'hero.pill2': 'Solana', 'hero.pill3': 'Open source', 'hero.pill4': 'Community first', 'hero.cardTitle': 'Live ecosystem', 'hero.cardSubtitle': 'Solana network', 'ticker.supply': '1B TOTAL SUPPLY', 'ticker.open': 'OPEN SOURCE', 'ticker.supply2': '1B TOTAL SUPPLY', 'ticker.open2': 'OPEN SOURCE', 'vision.eyebrow': 'The idea', 'vision.title': 'Technology can also be <em>human.</em>', 'vision.p1': 'Lingua MemeCoin was created to turn cultural and linguistic diversity into a new layer of digital value: shared, open, and built in community.', 'vision.p2': 'It is not just a financial asset, but a structure of identity, collaboration, and open innovation designed to connect people, languages, and resources in a meaningful way.', 'vision.link': 'Read our vision ↗', 'vision.card1.title': 'Culture', 'vision.card1.text': 'Linguistic diversity as a force for creativity, belonging, and global connection.', 'vision.card2.title': 'Community', 'vision.card2.text': 'An open space where everyone can participate, contribute, and grow.', 'vision.image.label': 'Many voices', 'vision.image.title': 'One community', 'vision.image.alt': 'Cultural diversity and community', 'platform.eyebrow': 'What does it represent?', 'platform.title': 'A cultural platform with a digital structure.', 'platform.card1.title': 'Identity', 'platform.card1.text': 'Built around the idea of connecting cultures and languages under one ecosystem.', 'platform.card2.title': 'Infrastructure', 'platform.card2.text': 'Open, simple, and powerful, with a base designed to grow without losing clarity.', 'platform.card3.title': 'Action', 'platform.card3.text': 'A community that understands the project’s intent and executes it with discipline.', 'tokenomics.eyebrow': 'Foundation', 'tokenomics.title': 'Simple by design.<br><em>Built to last.</em>', 'tokenomics.subtitle': 'A transparent model grounded in clarity, defined mechanisms, and a community-first approach.', 'stats.supply': 'Total supply', 'stats.tax': 'Fixed tax', 'stats.potential': 'Potential', 'stats.community': 'Community', 'table.supplyTitle': 'Total supply', 'table.supplyText': '1,000,000,000 $LNG', 'table.networkTitle': 'Network', 'table.networkText': 'Solana', 'table.standardTitle': 'Token standard', 'table.standardText': 'Token-2022', 'table.mintTitle': 'Mint authority', 'table.mintText': 'Renounced', 'table.freezeTitle': 'Freeze authority', 'table.freezeText': 'Renounced', 'table.taxTitle': 'Fixed tax', 'table.taxText': '0.0001% immutable', 'tokenomics.link1': 'Read technical analysis ↗', 'tokenomics.link2': 'View on Solscan ↗', 'roadmap.eyebrow': 'Journey', 'roadmap.title': 'From local roots<br />to a global voice.', 'roadmap.text': 'We are building a solid foundation with clear steps and a strong narrative for the ecosystem’s growth.', 'roadmap.phase1.tag': '01 · NOW', 'roadmap.phase1.title': 'Foundation', 'roadmap.phase1.text': 'Identity, documentation, website, community, and public presence.', 'roadmap.phase2.tag': '02 · NEXT', 'roadmap.phase2.title': 'Expansion', 'roadmap.phase2.text': 'More tools, broader participation, and a stronger presence across languages.', 'roadmap.phase3.tag': '03 · FUTURE', 'roadmap.phase3.title': 'Impact', 'roadmap.phase3.text': 'A global digital cultural ecosystem with strong community roots.', 'presale.eyebrow': 'Presale', 'presale.title': 'A launch plan that is clear, organized, and transparent.', 'presale.item1': 'Structure definition', 'presale.item2': 'Public documentation', 'presale.item3': 'Protection measures', 'presale.item4': 'Active community', 'faq.eyebrow': 'Key questions', 'faq.title': 'Everything you need to know.', 'faq.q1.title': 'What is Lingua MemeCoin?', 'faq.q1.text': 'It is a digital ecosystem with a cultural, community, and technological focus, built on Solana.', 'faq.q2.title': 'Does it have clear tokenomics?', 'faq.q2.text': 'Yes. Tokenomics are defined with total supply, fixed tax, and mechanisms with renounced authority.', 'faq.q3.title': 'Is it a serious project?', 'faq.q3.text': 'The goal is transparency, documentation, discipline, and a solid technical and communicative foundation.', 'footer.tagline': 'Different cultures, one same language.', 'footer.docs': 'Docs', 'footer.bottom': 'Made with intention.', 'aria.brand': 'Lingua MemeCoin home', 'aria.menu': 'Open menu', 'aria.nav': 'Main navigation', 'aria.language': 'Language selector', 'aria.ticker': 'Key project information', 'aria.footerBrand': 'Lingua MemeCoin footer'
   }
 };
 
@@ -210,83 +16,88 @@ const i18nNodes = document.querySelectorAll('[data-i18n]');
 
 function applyLanguage(lang) {
   const dict = translations[lang] || translations.es;
-
   i18nNodes.forEach((node) => {
-    const key = node.dataset.i18n;
-    const value = dict[key];
+    const value = dict[node.dataset.i18n];
     if (!value) return;
-
     const attr = node.dataset.i18nAttr;
-    if (attr) {
-      node.setAttribute(attr, value);
-      return;
-    }
-
-    node.innerHTML = value;
+    if (attr) node.setAttribute(attr, value);
+    else node.innerHTML = value;
   });
-
   document.documentElement.lang = lang;
   localStorage.setItem('lingua-language', lang);
-
-  langButtons.forEach((button) => {
-    const isActive = button.dataset.lang === lang;
-    button.classList.toggle('active', isActive);
-  });
+  langButtons.forEach((button) => button.classList.toggle('active', button.dataset.lang === lang));
 }
 
-langButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    applyLanguage(button.dataset.lang);
-  });
-});
-
+langButtons.forEach((button) => button.addEventListener('click', () => applyLanguage(button.dataset.lang)));
 const nav = document.querySelector('.nav');
 const menuToggle = document.querySelector('.menu-toggle');
 const yearNode = document.getElementById('year');
-
-if (yearNode) {
-  yearNode.textContent = new Date().getFullYear();
-}
-
+if (yearNode) yearNode.textContent = new Date().getFullYear();
 if (nav && menuToggle) {
   menuToggle.addEventListener('click', () => {
     const isOpen = nav.classList.toggle('open');
     menuToggle.setAttribute('aria-expanded', String(isOpen));
   });
-
-  nav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('open');
-      menuToggle.setAttribute('aria-expanded', 'false');
-    });
-  });
+  nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+    nav.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+  }));
 }
 
 const revealItems = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.12 }
-);
-
+const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
+  if (entry.isIntersecting) {
+    entry.target.classList.add('visible');
+    observer.unobserve(entry.target);
+  }
+}), { threshold: 0.12 });
 revealItems.forEach((item) => observer.observe(item));
 
-const anchorLinks = document.querySelectorAll('a[href^="#"]');
-anchorLinks.forEach((link) => {
-  link.addEventListener('click', (event) => {
-    const targetId = link.getAttribute('href');
-    const target = targetId ? document.querySelector(targetId) : null;
-    if (!target) return;
-    event.preventDefault();
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-});
+document.querySelectorAll('a[href^="#"]').forEach((link) => link.addEventListener('click', (event) => {
+  const target = document.querySelector(link.getAttribute('href'));
+  if (!target) return;
+  event.preventDefault();
+  target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}));
+
+function countryFlag(code) {
+  if (!code || code.length !== 2) return '🌎';
+  return [...code.toUpperCase()].map((letter) => String.fromCodePoint(127397 + letter.charCodeAt(0))).join('');
+}
+
+function showVisitorGreeting(country, code) {
+  if (sessionStorage.getItem('lingua-greeting-seen')) return;
+  const greeting = document.createElement('aside');
+  greeting.className = 'visitor-greeting';
+  greeting.setAttribute('role', 'status');
+  greeting.innerHTML = '<div class="visitor-flag" aria-hidden="true"></div><div class="visitor-copy"><strong>Bienvenido/a a Lingua</strong><span></span></div><button type="button" class="visitor-close" aria-label="Cerrar saludo">×</button>';
+  greeting.querySelector('.visitor-flag').textContent = countryFlag(code);
+  greeting.querySelector('span').textContent = country ? `Nos visitas desde ${country}` : 'Una comunidad sin fronteras';
+  document.body.appendChild(greeting);
+  requestAnimationFrame(() => greeting.classList.add('is-visible'));
+  const close = () => {
+    greeting.classList.remove('is-visible');
+    sessionStorage.setItem('lingua-greeting-seen', '1');
+    setTimeout(() => greeting.remove(), 350);
+  };
+  greeting.querySelector('.visitor-close').addEventListener('click', close);
+  window.setTimeout(close, 6500);
+}
+
+async function detectVisitorCountry() {
+  try {
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), 2500);
+    const response = await fetch('https://ipapi.co/json/', { signal: controller.signal, headers: { Accept: 'application/json' } });
+    window.clearTimeout(timeout);
+    if (!response.ok) throw new Error('Geolocation unavailable');
+    const data = await response.json();
+    showVisitorGreeting(data.country_name, data.country_code);
+  } catch {
+    showVisitorGreeting('', '');
+  }
+}
 
 const savedLanguage = localStorage.getItem('lingua-language') || 'es';
 applyLanguage(savedLanguage);
+detectVisitorCountry();
