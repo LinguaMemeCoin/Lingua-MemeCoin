@@ -1,8 +1,8 @@
 # 🚀 DETALLES DE PREVENTA - LINGUA MEMECOIN
 
 **Fecha de documento:** 2026-09-11  
-**Estado:** Planificación Final  
-**Última actualización:** 2026-09-11
+**Estado:** Planificación Inicial  
+**Última actualización:** 2026-09-19
 
 ---
 
@@ -18,21 +18,20 @@ Actividades:
   - Auditoría comunitaria en GitHub (inicial)
   - Auditoría profesional (pendiente fondos)
   - Verificación final en todos los sistemas
-  
+  - Creacion de pagina web
 Timeline: Variable (según auditoría)
 Criterio de salida: Auditoría completada + contrato verificado
 ```
 
 #### **Fase 2: Lanzamiento de Preventa** 🟡
 ```
-Inicio tentativo: 15 de septiembre 2026 (posiblemente retrasado)
 Duración: 15 a 30 días (única etapa, sin fases intermedias)
 Criterios:
   ✓ Auditoría profesional completada O
   ✓ Auditoría GitHub verificada satisfactoriamente
   ✓ Contrato redactado al máximo
   
-Objective: Rapida y ordenada (no eternas)
+Objectivo: Rapida y ordenada (no eternas)
 ```
 
 #### **Fase 3: Listado y Apertura de Mercado** 🟢
