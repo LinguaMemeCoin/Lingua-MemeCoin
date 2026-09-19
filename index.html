@@ -1,404 +1,149 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Lingua MemeCoin — Diferentes culturas, una misma lengua. Ecosistema digital, comunidad global y visión abierta sobre Solana."
-    />
-    <meta name="theme-color" content="#0b101a" />
-    <title>Lingua MemeCoin | Different cultures. One Lingua.</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="noise"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lingua MemeCoin | One Lingua</title>
+    <!-- Cargamos Tailwind CSS para el diseño visual limpio -->
+    <script src="https://tailwindcss.com"></script>
+    <!-- Cargamos las tipografías estilo Maya / Piedra Arqueológica desde Google Fonts -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@600;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: #121417; /* Fondo carbón mineral */
+        }
+        .font-maya-title {
+            font-family: 'Cinzel Decorative', serif;
+        }
+        .font-maya-sub {
+            font-family: 'Cinzel', serif;
+        }
+        .color-arena {
+            color: #DFD5C6; /* Tono piedra caliza/arena */
+        }
+        .border-arena {
+            border-color: #3A3630;
+        }
+        .bg-mineral {
+            background-color: #1A1D24;
+        }
+    </style>
+</head>
+<body class="text-gray-300 min-h-screen antialiased">
 
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a href="#inicio" class="brand" aria-label="Lingua MemeCoin inicio" data-i18n="aria.brand" data-i18n-attr="aria-label">
-          <span class="brand-mark">L</span>
-          <span class="brand-text">LINGUA</span>
-        </a>
+    <!-- SECCIÓN DE BIENVENIDA GEOLOCALIZADA -->
+    <div id="banner-bienvenida" class="bg-[#1C1A17] border-b border-[#3A3630] px-6 py-3 text-center text-sm hidden">
+        <p class="font-maya-sub tracking-wider text-xs color-arena">
+            <span id="saludo-texto">Bienvenido a nuestro ecosistema</span> 
+            <span id="bandera-pais" class="ml-1 text-base"></span>
+        </p>
+    </div>
 
-        <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" data-i18n="aria.menu" data-i18n-attr="aria-label">
-          <span></span><span></span><span></span>
-        </button>
-
-        <nav class="nav" aria-label="Navegación principal" data-i18n="aria.nav" data-i18n-attr="aria-label">
-          <a href="#vision" data-i18n="nav.vision">Visión</a>
-          <a href="#platform" data-i18n="nav.platform">Plataforma</a>
-          <a href="#tokenomics" data-i18n="nav.tokenomics">Tokenomics</a>
-          <a href="#roadmap" data-i18n="nav.roadmap">Roadmap</a>
-          <a href="#presale" data-i18n="nav.presale">Presale</a>
-          <a href="#faq" data-i18n="nav.faq">FAQ</a>
-          <a href="README.md" data-i18n="nav.docs">Docs</a>
-          <a href="https://github.com/LinguaMemeCoin/Lingua-MemeCoin" target="_blank" rel="noreferrer">GitHub</a>
-        </nav>
-
-        <div class="lang-switch" aria-label="Selector de idioma" data-i18n="aria.language" data-i18n-attr="aria-label">
-          <button class="lang-btn active" data-lang="es" type="button">ES</button>
-          <button class="lang-btn" data-lang="en" type="button">EN</button>
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="border-b border-arena bg-[#121417]/90 backdrop-blur-md sticky top-0 z-50 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="text-xl font-bold tracking-widest font-maya-title color-arena">L LINGUA</div>
+            <div class="flex space-x-6 text-xs font-maya-sub tracking-widest uppercase">
+                <a href="#idea" class="hover:text-[#DFD5C6] text-gray-400 transition">La Idea</a>
+                <a href="#tokenomics" class="hover:text-[#DFD5C6] text-gray-400 transition">Tokenomics</a>
+                <a href="#roadmap" class="hover:text-[#DFD5C6] text-gray-400 transition">Roadmap</a>
+            </div>
         </div>
+    </nav>
 
-        <a
-          class="button button-primary button-small nav-button"
-          href="https://solscan.io/token/AXjMKnXbXo1LXtdSmrkiDUoZkj9fzwfc5afj79G6o84x"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <span data-i18n="header.token">Ver token</span> ↗
-        </a>
-      </div>
+    <!-- SECCIÓN PRINCIPAL (HERO) -->
+    <header class="max-w-4xl mx-auto text-center py-24 px-6">
+        <span class="border border-[#3A3630] bg-[#1A1815] text-[#C4B5A1] text-[10px] font-maya-sub tracking-[0.2em] px-4 py-1.5 rounded uppercase">Ecosistema Abierto · Solana</span>
+        <h1 class="text-4xl md:text-5xl font-extrabold color-arena mt-8 mb-6 tracking-wide font-maya-sub">
+            Different cultures. <br><span class="opacity-80">One Lingua.</span>
+        </h1>
+        <p class="text-base text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+            El primer meme de identidad cultural en Solana. Rescatamos y conectamos las raíces de cada comunidad global mediante tecnología descentralizada, transparente y simétrica.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4 text-xs font-maya-sub tracking-widest uppercase">
+            <a href="#" class="bg-[#DFD5C6] text-[#121417] font-bold px-8 py-3.5 rounded hover:bg-[#C4B5A1] transition shadow-sm">Explorar $LNG</a>
+            <a href="#idea" class="border border-[#3A3630] hover:border-gray-600 text-gray-300 px-8 py-3.5 rounded transition">Descubrir Visión</a>
+        </div>
     </header>
 
-    <main id="inicio">
-      <section class="hero container">
-        <div class="hero-copy reveal">
-          <div class="eyebrow">
-            <span></span>
-            <span data-i18n="hero.eyebrow">Ecosistema abierto · Solana</span>
-          </div>
+    <!-- TARJETAS RÁPIDAS DE DATOS (NEUTRAS) -->
+    <section class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 px-6 mb-24 text-center font-maya-sub tracking-wider">
+        <div class="bg-mineral/40 border border-arena/40 p-5 rounded"><div class="text-lg font-bold color-arena">1B</div><div class="text-[10px] text-gray-500 uppercase mt-1">Supply Total</div></div>
+        <div class="bg-mineral/40 border border-arena/40 p-5 rounded"><div class="text-lg font-bold text-gray-300">Solana</div><div class="text-[10px] text-gray-500 uppercase mt-1">Red Principal</div></div>
+        <div class="bg-mineral/40 border border-arena/40 p-5 rounded"><div class="text-lg font-bold text-gray-300">0.0001%</div><div class="text-[10px] text-gray-500 uppercase mt-1">Tax Fijo</div></div>
+        <div class="bg-mineral/40 border border-arena/40 p-5 rounded"><div class="text-lg font-bold color-arena">100%</div><div class="text-[10px] text-gray-500 uppercase mt-1">Comunidad</div></div>
+    </section>
 
-          <h1>
-            <span data-i18n="hero.titleLine1">Different cultures.</span><br />
-            <em data-i18n="hero.titleLine2">One Lingua.</em>
-          </h1>
-
-          <p class="lead" data-i18n="hero.lead">
-            Lingua MemeCoin es una comunidad global construida alrededor de la diversidad cultural,
-            la innovación abierta y la conexión entre personas, ideas y tecnologías.
-          </p>
-
-          <div class="hero-actions">
-            <a class="button button-primary" href="https://solscan.io/token/AXjMKnXbXo1LXtdSmrkiDUoZkj9fzwfc5afj79G6o84x" target="_blank" rel="noreferrer">
-              <span data-i18n="hero.primaryCta">Explorar $LNG</span> ↗
-            </a>
-            <a class="button button-ghost" href="#vision" data-i18n="hero.secondaryCta">Descubrir visión</a>
-          </div>
-
-          <div class="hero-meta">
-            <span class="meta-pill" data-i18n="hero.pill1">1B supply</span>
-            <span class="meta-pill" data-i18n="hero.pill2">Solana</span>
-            <span class="meta-pill" data-i18n="hero.pill3">Open source</span>
-            <span class="meta-pill" data-i18n="hero.pill4">Community first</span>
-          </div>
+    <!-- LA IDEA -->
+    <section id="idea" class="max-w-4xl mx-auto py-12 px-6 mb-24 border-t border-arena/30">
+        <h2 class="text-2xl font-bold color-arena text-center mb-14 font-maya-sub tracking-wider">La tecnología también puede ser <span class="opacity-70">humana</span></h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-mineral/30 border border-arena/30 p-8 rounded">
+                <div class="text-gray-500 font-maya-sub text-[10px] tracking-widest mb-3">01 / CULTURA</div>
+                <h3 class="text-lg font-bold color-arena mb-3 font-maya-sub">Diversidad sin fricciones</h3>
+                <p class="text-sm text-gray-400 leading-relaxed">Convertimos el legado lingüístico en una estructura digital compartida, resguardando la identidad de los pueblos originarios dentro de la blockchain.</p>
+            </div>
+            <div class="bg-mineral/30 border border-arena/30 p-8 rounded">
+                <div class="text-gray-500 font-maya-sub text-[10px] tracking-widest mb-3">02 / COMUNIDAD</div>
+                <h3 class="text-lg font-bold color-arena mb-3 font-maya-sub">Espacio Simétrico</h3>
+                <p class="text-sm text-gray-400 leading-relaxed">Un entorno abierto donde cada individuo, sin importar su lengua geográfica, dispone de los recursos públicos para interactuar y expandirse.</p>
+            </div>
         </div>
+    </section>
 
-        <div class="hero-visual reveal">
-          <div class="glow glow-one"></div>
-          <div class="glow glow-two"></div>
-
-          <div class="console-card">
-            <div class="console-topbar">
-              <span class="dot red"></span>
-              <span class="dot amber"></span>
-              <span class="dot green"></span>
-              <span class="console-name">lingua-core</span>
+    <!-- TOKENOMICS -->
+    <section id="tokenomics" class="bg-[#17191D] border-y border-arena/20 py-20 px-6 mb-24">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold color-arena text-center mb-3 font-maya-sub tracking-wider">Mecanismos de Transparencia</h2>
+            <p class="text-xs text-gray-500 text-center mb-12 font-maya-sub tracking-widest">ESTRUCTURA INMUTABLE DE PROTECCIÓN</p>
+            <div class="bg-mineral/50 border border-arena/30 rounded overflow-hidden divide-y divide-arena/20 text-sm">
+                <div class="flex justify-between p-4 px-6"><span class="text-gray-400">Autoridad de Emisión (Mint Authority)</span><span class="color-arena font-mono font-bold">Renunciada</span></div>
+                <div class="flex justify-between p-4 px-6"><span class="text-gray-400">Autoridad de Bloqueo (Freeze Authority)</span><span class="color-arena font-mono font-bold">Renunciada</span></div>
+                <div class="flex justify-between p-4 px-6"><span class="text-gray-400">Tasa de Transacción (Tax)</span><span class="text-gray-300 font-mono">0.0001% Inmutable</span></div>
+                <div class="flex justify-between p-4 px-6"><span class="text-gray-400">Especificación Técnica</span><span class="text-gray-400 font-mono">Token-2022 (Solana)</span></div>
             </div>
-
-            <div class="console-body">
-              <div class="code-line"><span class="key">token</span> = <span class="str">"Lingua MemeCoin"</span></div>
-              <div class="code-line"><span class="key">network</span> = <span class="str">"Solana Mainnet-Beta"</span></div>
-              <div class="code-line"><span class="key">supply</span> = <span class="str">1_000_000_000</span></div>
-              <div class="code-line"><span class="key">mint</span> = <span class="warn">renounced</span></div>
-              <div class="code-line"><span class="key">freeze</span> = <span class="warn">renounced</span></div>
-              <div class="code-line"><span class="key">mission</span> = <span class="str">"Conectar culturas sin fricción"</span></div>
-            </div>
-          </div>
-
-          <div class="floating-card">
-            <div class="live-dot"></div>
-            <div>
-              <strong data-i18n="hero.cardTitle">Live ecosystem</strong>
-              <small data-i18n="hero.cardSubtitle">Solana network</small>
-            </div>
-          </div>
         </div>
-      </section>
+    </section>
 
-      <div class="ticker-wrap" aria-label="Datos clave del proyecto" data-i18n="aria.ticker" data-i18n-attr="aria-label">
-        <div class="ticker-track">
-          <span>$LNG</span>
-          <span>•</span>
-          <span data-i18n="ticker.supply">1B TOTAL SUPPLY</span>
-          <span>•</span>
-          <span>SOLANA</span>
-          <span>•</span>
-          <span data-i18n="ticker.open">OPEN SOURCE</span>
-          <span>•</span>
-          <span>$LNG</span>
-          <span>•</span>
-          <span data-i18n="ticker.supply2">1B TOTAL SUPPLY</span>
-          <span>•</span>
-          <span>SOLANA</span>
-          <span>•</span>
-          <span data-i18n="ticker.open2">OPEN SOURCE</span>
+    <!-- ROADMAP -->
+    <section id="roadmap" class="max-w-3xl mx-auto py-12 px-6 mb-24">
+        <h2 class="text-2xl font-bold color-arena text-center mb-14 font-maya-sub tracking-wider">Camino Arqueológico Digital</h2>
+        <div class="space-y-6">
+            <div class="flex items-start gap-5 bg-mineral/20 p-6 rounded border border-arena/30">
+                <span class="border border-arena/60 text-gray-300 px-3 py-1 rounded text-[10px] font-maya-sub tracking-widest">ORIGEN</span>
+                <div>
+                    <h4 class="text-base font-bold color-arena font-maya-sub">Fase 1: Asentamiento</h4>
+                    <p class="text-sm text-gray-400 mt-2 leading-relaxed">Publicación de la interfaz de usuario con raíces estéticas, liberación de manifiestos técnicos y distribución comunitaria inicial.</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-5 bg-mineral/10 p-6 rounded border border-arena/10">
+                <span class="border border-arena/10 text-gray-600 px-3 py-1 rounded text-[10px] font-maya-sub tracking-widest">EXPANSIÓN</span>
+                <div>
+                    <h4 class="text-base font-bold text-gray-500 font-maya-sub">Fase 2: Interconexión</h4>
+                    <p class="text-sm text-gray-600 mt-2 leading-relaxed">Traducción e integración automática de dialectos globales en herramientas distribuidas dentro de redes sociales.</p>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <section class="section section-light" id="vision">
-        <div class="container two-col">
-          <div class="section-copy reveal">
-            <div class="eyebrow eyebrow-dark">
-              <span></span>
-              <span data-i18n="vision.eyebrow">La idea</span>
-            </div>
-            <h2 data-i18n="vision.title">La tecnología también puede ser <em>humana.</em></h2>
-            <p data-i18n="vision.p1">
-              Lingua MemeCoin nace para convertir la diversidad cultural y lingüística en una nueva
-              capa de valor digital: compartida, abierta y construida en comunidad.
-            </p>
-            <p data-i18n="vision.p2">
-              No es solo una pieza financiera, sino una estructura de identidad, colaboración y
-              innovación abierta pensada para conectar pueblos, lenguas y recursos de manera real.
-            </p>
-            <a class="inline-link" href="VISION.md" data-i18n="vision.link">Leer nuestra visión ↗</a>
-          </div>
-
-          <div class="feature-grid reveal">
-            <article class="feature-card dark-card">
-              <span class="feature-index">01</span>
-              <h3 data-i18n="vision.card1.title">Cultura</h3>
-              <p data-i18n="vision.card1.text">La diversidad lingüística como fuerza de creatividad, pertenencia y conexión global.</p>
-            </article>
-
-            <article class="feature-card">
-              <span class="feature-index">02</span>
-              <h3 data-i18n="vision.card2.title">Comunidad</h3>
-              <p data-i18n="vision.card2.text">Un espacio abierto donde cada persona puede participar, aportar y crecer.</p>
-            </article>
-
-            <article class="feature-card image-card wide-card">
-              <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1000&q=80" alt="Diversidad cultural y comunidad" data-i18n="vision.image.alt" data-i18n-attr="alt" />
-              <div class="image-overlay">
-                <span data-i18n="vision.image.label">Many voices</span>
-                <strong data-i18n="vision.image.title">One community</strong>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-dark" id="platform">
-        <div class="container platform-wrap">
-          <div class="platform-header reveal">
-            <div class="eyebrow">
-              <span></span>
-              <span data-i18n="platform.eyebrow">¿Qué representa?</span>
-            </div>
-            <h2 data-i18n="platform.title">Una plataforma cultural con estructura digital.</h2>
-          </div>
-
-          <div class="platform-grid">
-            <article class="platform-card reveal">
-              <span class="card-tag">01</span>
-              <h3 data-i18n="platform.card1.title">Identidad</h3>
-              <p data-i18n="platform.card1.text">Se construye sobre la idea de conectar culturas y lenguas bajo un mismo ecosistema.</p>
-            </article>
-
-            <article class="platform-card reveal">
-              <span class="card-tag">02</span>
-              <h3 data-i18n="platform.card2.title">Infraestructura</h3>
-              <p data-i18n="platform.card2.text">Abierta, simple y potente, con una base pensada para crecer sin perder claridad.</p>
-            </article>
-
-            <article class="platform-card reveal">
-              <span class="card-tag">03</span>
-              <h3 data-i18n="platform.card3.title">Acción</h3>
-              <p data-i18n="platform.card3.text">Una comunidad que entiende la intención detrás del proyecto y la ejecuta con disciplina.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-light" id="tokenomics">
-        <div class="container">
-          <div class="center-title reveal">
-            <div class="eyebrow eyebrow-dark">
-              <span></span>
-              <span data-i18n="tokenomics.eyebrow">Fundamentos</span>
-            </div>
-            <h2 data-i18n="tokenomics.title">Simple por diseño.<br /><em>Construido para durar.</em></h2>
-            <p data-i18n="tokenomics.subtitle">Un modelo transparente con base en claridad, mecanismos definidos y enfoque comunitario.</p>
-          </div>
-
-          <div class="stats-grid reveal">
-            <div class="stat-box">
-              <strong>1B</strong>
-              <span data-i18n="stats.supply">Total supply</span>
-            </div>
-            <div class="stat-box">
-              <strong>0.0001%</strong>
-              <span data-i18n="stats.tax">Tax fijo</span>
-            </div>
-            <div class="stat-box">
-              <strong>∞</strong>
-              <span data-i18n="stats.potential">Potencial</span>
-            </div>
-            <div class="stat-box">
-              <strong>100%</strong>
-              <span data-i18n="stats.community">Comunidad</span>
-            </div>
-          </div>
-
-          <div class="token-table-wrap reveal">
-            <table class="token-table">
-              <tr>
-                <th data-i18n="table.supplyTitle">Supply total</th>
-                <td data-i18n="table.supplyText">1,000,000,000 $LNG</td>
-              </tr>
-              <tr>
-                <th data-i18n="table.networkTitle">Red</th>
-                <td data-i18n="table.networkText">Solana</td>
-              </tr>
-              <tr>
-                <th data-i18n="table.standardTitle">Token standard</th>
-                <td data-i18n="table.standardText">Token-2022</td>
-              </tr>
-              <tr>
-                <th data-i18n="table.mintTitle">Mint Authority</th>
-                <td><span class="status success" data-i18n="table.mintText">Renunciada</span></td>
-              </tr>
-              <tr>
-                <th data-i18n="table.freezeTitle">Freeze Authority</th>
-                <td><span class="status success" data-i18n="table.freezeText">Renunciada</span></td>
-              </tr>
-              <tr>
-                <th data-i18n="table.taxTitle">Tax fijo</th>
-                <td data-i18n="table.taxText">0.0001% inmutable</td>
-              </tr>
-            </table>
-          </div>
-
-          <div class="token-cta reveal">
-            <a class="button button-dark" href="TOKENOMICS_ANALYSIS.md" data-i18n="tokenomics.link1">Leer análisis técnico ↗</a>
-            <a class="button button-light-outline" href="https://solscan.io/token/AXjMKnXbXo1LXtdSmrkiDUoZkj9fzwfc5afj79G6o84x" target="_blank" rel="noreferrer" data-i18n="tokenomics.link2">Ver en Solscan ↗</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-light" id="roadmap">
-        <div class="container roadmap-layout">
-          <div class="section-copy reveal">
-            <div class="eyebrow eyebrow-dark">
-              <span></span>
-              <span data-i18n="roadmap.eyebrow">Camino</span>
-            </div>
-            <h2 data-i18n="roadmap.title">De las raíces locales<br />a una voz global.</h2>
-            <p data-i18n="roadmap.text">
-              Estamos construyendo una base sólida, con pasos definidos y una narrativa clara para el crecimiento del ecosistema.
-            </p>
-          </div>
-
-          <div class="roadmap-list reveal">
-            <article class="roadmap-item active">
-              <span class="roadmap-dot"></span>
-              <div>
-                <small data-i18n="roadmap.phase1.tag">01 · AHORA</small>
-                <h3 data-i18n="roadmap.phase1.title">Fundación</h3>
-                <p data-i18n="roadmap.phase1.text">Identidad, documentación, sitio web, comunidad y presencia pública.</p>
-              </div>
-            </article>
-
-            <article class="roadmap-item">
-              <span class="roadmap-dot"></span>
-              <div>
-                <small data-i18n="roadmap.phase2.tag">02 · SIGUIENTE</small>
-                <h3 data-i18n="roadmap.phase2.title">Expansión</h3>
-                <p data-i18n="roadmap.phase2.text">Más herramientas, participación más amplia y presencia en más idiomas.</p>
-              </div>
-            </article>
-
-            <article class="roadmap-item">
-              <span class="roadmap-dot"></span>
-              <div>
-                <small data-i18n="roadmap.phase3.tag">03 · FUTURO</small>
-                <h3 data-i18n="roadmap.phase3.title">Impacto</h3>
-                <p data-i18n="roadmap.phase3.text">Un ecosistema cultural digital global con fuertes raíces comunitarias.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-cta" id="presale">
-        <div class="container cta-box reveal">
-          <div>
-            <div class="eyebrow eyebrow-dark">
-              <span></span>
-              <span data-i18n="presale.eyebrow">Presale</span>
-            </div>
-            <h2 data-i18n="presale.title">Un plan de lanzamiento claro, ordenado y transparente.</h2>
-          </div>
-
-          <div class="list-inline">
-            <span data-i18n="presale.item1">Definición de estructura</span>
-            <span data-i18n="presale.item2">Documentación pública</span>
-            <span data-i18n="presale.item3">Protecciones</span>
-            <span data-i18n="presale.item4">Comunidad activa</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="section faq-section" id="faq">
-        <div class="container faq-wrap reveal">
-          <div class="faq-header">
-            <div class="eyebrow eyebrow-dark">
-              <span></span>
-              <span data-i18n="faq.eyebrow">Preguntas clave</span>
-            </div>
-            <h2 data-i18n="faq.title">Todo lo que necesitas saber.</h2>
-          </div>
-
-          <div class="faq-grid">
-            <article class="faq-item">
-              <h3 data-i18n="faq.q1.title">¿Qué es Lingua MemeCoin?</h3>
-              <p data-i18n="faq.q1.text">Es un ecosistema digital con enfoque cultural, comunitario y tecnológico, construido sobre Solana.</p>
-            </article>
-
-            <article class="faq-item">
-              <h3 data-i18n="faq.q2.title">¿Tiene tokenómica clara?</h3>
-              <p data-i18n="faq.q2.text">Sí. La tokenómica se define con supply total, tax fijo y mecanismos con autoridad renunciada.</p>
-            </article>
-
-            <article class="faq-item">
-              <h3 data-i18n="faq.q3.title">¿Es un proyecto serio?</h3>
-              <p data-i18n="faq.q3.text">Lo que se busca es transparencia, documentación, disciplina y una base técnica y comunicativa sólida.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="container footer-inner">
-        <a href="#inicio" class="brand" aria-label="Lingua MemeCoin footer" data-i18n="aria.footerBrand" data-i18n-attr="aria-label">
-          <span class="brand-mark">L</span>
-          <span class="brand-text">LINGUA</span>
-        </a>
-
-        <p data-i18n="footer.tagline">Diferentes culturas, una misma lengua.</p>
-
-        <div class="footer-links">
-          <a href="https://github.com/LinguaMemeCoin/Lingua-MemeCoin" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://solscan.io/token/AXjMKnXbXo1LXtdSmrkiDUoZkj9fzwfc5afj79G6o84x" target="_blank" rel="noreferrer">Solscan</a>
-          <a href="README.md" data-i18n="footer.docs">Docs</a>
-        </div>
-      </div>
-
-      <div class="container footer-bottom">
-        <span>© <span id="year"></span> Lingua MemeCoin</span>
-        <span data-i18n="footer.bottom">Made with intention.</span>
-      </div>
+    <!-- PIE DE PÁGINA -->
+    <footer class="border-t border-arena/20 bg-[#0C0D0F] py-10 text-center text-[11px] text-gray-600 font-maya-sub tracking-widest uppercase">
+        <p class="mb-3">© 2026 Lingua MemeCoin · Hecho con intención.</p>
+        <p class="text-gray-500">Diferentes culturas, una misma lengua.</p>
     </footer>
 
-    <script src="script.js"></script>
-  </body>
-</html>
+    <!-- SCRIPT SENSING PARA LA BIENVENIDA POR PAÍS -->
+    <script>
+        fetch('https://ipapi.co')
+            .then(response => response.json())
+            .then(data => {
+                if(data.country_name) {
+                    const banner = document.getElementById('banner-bienvenida');
+                    const texto = document.getElementById('saludo-texto');
+                    const bandera = document.getElementById('bandera-pais');
+                    
+                    // Configuramos el texto del saludo y añadimos la bandera correspondiente
