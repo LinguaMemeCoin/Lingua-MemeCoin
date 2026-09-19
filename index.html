@@ -4,25 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lingua MemeCoin ($LNG) | Diferentes Culturas, Una Misma Lingua</title>
-    <!-- Tailwind CSS para Diseño Avanzado -->
-    <script src="https://tailwindcss.com"></script>
-    <!-- Iconos Lucide -->
+    
+    <!-- ✅ CORREGIDO: CDN Oficial de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- ✅ CORREGIDO: Paquete completo de Lucide Icons -->
     <script src="https://unpkg.com"></script>
+    
     <!-- Tipografía Google Fonts -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
+    
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
     </style>
 </head>
-<body class="bg-[#0b111e] text-slate-100 antialiased selection:bg-red-500 selection:text-white">
+<body class="bg-[#0b111e] text-slate-100 antialiased selection:bg-red-500 selection:text-white min-h-screen">
 
     <!-- Fondo Decorativo Global con Luces de Neón -->
     <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-        <div class="absolute -top-40 -right-40 w-96 h-96 bg-red-600/10 rounded-full blur-[120px]"></div>
-        <div class="absolute top-1/3 -left-40 w-96 h-96 bg-emerald-600/10 rounded-full blur-[120px]"></div>
-        <div class="absolute bottom-10 right-10 w-80 h-80 bg-amber-500/5 rounded-full blur-[100px]"></div>
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-red-600/20 rounded-full blur-[120px]"></div>
+        <div class="absolute top-1/3 -left-40 w-96 h-96 bg-emerald-600/20 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-10 right-10 w-80 h-80 bg-amber-500/10 rounded-full blur-[100px]"></div>
     </div>
 
     <!-- Encabezado / Hero Section Llamativa -->
@@ -97,7 +101,7 @@
     <!-- Cuerpo del Contenido -->
     <main class="max-w-4xl mx-auto px-6 pb-24 space-y-20 relative z-10">
         
-        <!-- Sección: Pilares Fundamentales (Tarjetas Rediseñadas) -->
+        <!-- Sección: Pilares Fundamentales -->
         <section class="space-y-8">
             <h2 class="text-xl font-bold uppercase tracking-widest text-slate-400 flex items-center gap-3 border-b border-slate-800 pb-3">
                 <i data-lucide="landmark" class="text-emerald-400 w-5 h-5"></i> Pilares de Transparencia
@@ -116,27 +120,20 @@
                 <!-- Tarjeta 2 -->
                 <div class="group bg-gradient-to-b from-slate-900 to-slate-950 p-6 rounded-xl border border-slate-800/80 hover:border-red-500/30 transition-all duration-300 hover:-translate-y-1">
                     <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400 mb-5 group-hover:bg-red-500 group-hover:text-slate-950 transition-all duration-300">
-                        <i data-lucide="shield-alert" class="w-5 h-5"></i>
+                        <i data-lucide="shield" class="w-5 h-5"></i>
                     </div>
-                    <h3 class="text-lg font-bold text-slate-200 mb-2">Neutralidad Absoluta</h3>
+                    <h3 class="text-lg font-bold text-slate-200 mb-2">Seguridad Primero</h3>
                     <p class="text-sm text-slate-400 leading-relaxed font-light">
-                        El proyecto no posee ideologías. Queda estrictamente prohibida la participación o patrocinio de corporaciones, ONGs o partidos políticos.
-                    </p>
-                </div>
-                <!-- Tarjeta 3 -->
-                <div class="group bg-gradient-to-b from-slate-900 to-slate-950 p-6 rounded-xl border border-slate-800/80 hover:border-amber-500/30 transition-all duration-300 hover:-translate-y-1">
-                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 mb-5 group-hover:bg-amber-500 group-hover:text-slate-950 transition-all duration-300">
-                        <i data-lucide="code-2" class="w-5 h-5"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-200 mb-2">Evolución Real</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed font-light">
-                        Asumimos un inicio amateur con herramientas NoCode e IA. El ecosistema migrará obligatoriamente hacia contratos nativos en Rust auditados.
+                        La postergación protege a los usuarios contra fallos en contratos automatizados de distribución masiva.
                     </p>
                 </div>
             </div>
         </section>
+    </main>
 
-        <!-- Sección: Tabla de Especificaciones Estilizada -->
-        <section class="space-y-6">
-            <h2 class="text-xl font-bold uppercase tracking-widest text-slate-400 flex items-center gap-3 border-b border-slate-800 pb-3">
-
+    <!-- ✅ OBLIGATORIO: Script para activar los iconos de Lucide en la página -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
