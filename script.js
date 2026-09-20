@@ -1,345 +1,158 @@
-const translations = {
-  es: {
-    'nav.vision': 'Visión',
-    'nav.platform': 'Plataforma',
-    'nav.tokenomics': 'Tokenomics',
-    'nav.roadmap': 'Roadmap',
-    'nav.presale': 'Presale',
-    'nav.faq': 'FAQ',
-    'nav.docs': 'Docs',
-    'header.token': 'Ver token',
-    'hero.eyebrow': 'Ecosistema abierto · Solana',
-    'hero.titleLine1': 'Different cultures.',
-    'hero.titleLine2': 'One Lingua.',
-    'hero.lead': 'Lingua MemeCoin es una comunidad global construida alrededor de la diversidad cultural, la innovación abierta y la conexión entre personas, ideas y tecnologías.',
-    'hero.primaryCta': 'Explorar $LNG',
-    'hero.secondaryCta': 'Descubrir visión',
-    'hero.pill1': '1B supply',
-    'hero.pill2': 'Solana',
-    'hero.pill3': 'Open source',
-    'hero.pill4': 'Community first',
-    'hero.cardTitle': 'Live ecosystem',
-    'hero.cardSubtitle': 'Solana network',
-    'ticker.supply': '1B TOTAL SUPPLY',
-    'ticker.open': 'OPEN SOURCE',
-    'ticker.supply2': '1B TOTAL SUPPLY',
-    'ticker.open2': 'OPEN SOURCE',
-    'vision.eyebrow': 'La idea',
-    'vision.title': 'La tecnología también puede ser humana.',
-    'vision.p1': 'Lingua MemeCoin nace para convertir la diversidad cultural y lingüística en una nueva capa de valor digital: compartida, abierta y construida en comunidad.',
-    'vision.p2': 'No es solo una pieza financiera, sino una estructura de identidad, colaboración y innovación abierta pensada para conectar pueblos, lenguas y recursos de manera real.',
-    'vision.link': 'Leer nuestra visión ↗',
-    'vision.card1.title': 'Cultura',
-    'vision.card1.text': 'La diversidad lingüística como fuerza de creatividad, pertenencia y conexión global.',
-    'vision.card2.title': 'Comunidad',
-    'vision.card2.text': 'Un espacio abierto donde cada persona puede participar, aportar y crecer.',
-    'vision.image.label': 'Many voices',
-    'vision.image.title': 'One community',
-    'platform.eyebrow': '¿Qué representa?',
-    'platform.title': 'Una plataforma cultural con estructura digital.',
-    'platform.card1.title': 'Identidad',
-    'platform.card1.text': 'Se construye sobre la idea de conectar culturas y lenguas bajo un mismo ecosistema.',
-    'platform.card2.title': 'Infraestructura',
-    'platform.card2.text': 'Abierta, simple y potente, con una base pensada para crecer sin perder claridad.',
-    'platform.card3.title': 'Acción',
-    'platform.card3.text': 'Una comunidad que entiende la intención detrás del proyecto y la ejecuta con disciplina.',
-    'tokenomics.eyebrow': 'Fundamentos',
-    'tokenomics.title': 'Simple por diseño.<br><em>Construido para durar.</em>',
-    'tokenomics.subtitle': 'Un modelo transparente con base en claridad, mecanismos definidos y enfoque comunitario.',
-    'stats.supply': 'Total supply',
-    'stats.tax': 'Tax fijo',
-    'stats.potential': 'Potencial',
-    'stats.community': 'Comunidad',
-    'table.supplyTitle': 'Supply total',
-    'table.supplyText': '1,000,000,000 $LNG',
-    'table.networkTitle': 'Red',
-    'table.networkText': 'Solana',
-    'table.standardTitle': 'Token standard',
-    'table.standardText': 'Token-2022',
-    'table.mintTitle': 'Mint Authority',
-    'table.mintText': 'Renunciada',
-    'table.freezeTitle': 'Freeze Authority',
-    'table.freezeText': 'Renunciada',
-    'table.taxTitle': 'Tax fijo',
-    'table.taxText': '0.0001% inmutable',
-    'tokenomics.link1': 'Leer análisis técnico ↗',
-    'tokenomics.link2': 'Ver en Solscan ↗',
-    'roadmap.eyebrow': 'Camino',
-    'roadmap.title': 'De las raíces locales<br />a una voz global.',
-    'roadmap.text': 'Estamos construyendo una base sólida, con pasos definidos y una narrativa clara para el crecimiento del ecosistema.',
-    'roadmap.phase1.tag': '01 · AHORA',
-    'roadmap.phase1.title': 'Fundación',
-    'roadmap.phase1.text': 'Identidad, documentación, sitio web, comunidad y presencia pública.',
-    'roadmap.phase2.tag': '02 · SIGUIENTE',
-    'roadmap.phase2.title': 'Expansión',
-    'roadmap.phase2.text': 'Más herramientas, participación más amplia y presencia en más idiomas.',
-    'roadmap.phase3.tag': '03 · FUTURO',
-    'roadmap.phase3.title': 'Impacto',
-    'roadmap.phase3.text': 'Un ecosistema cultural digital global con fuertes raíces comunitarias.',
-    'presale.eyebrow': 'Presale',
-    'presale.title': 'Un plan de lanzamiento claro, ordenado y transparente.',
-    'presale.item1': 'Definición de estructura',
-    'presale.item2': 'Documentación pública',
-    'presale.item3': 'Protecciones',
-    'presale.item4': 'Comunidad activa',
-    'faq.eyebrow': 'Preguntas clave',
-    'faq.title': 'Todo lo que necesitas saber.',
-    'faq.q1.title': '¿Qué es Lingua MemeCoin?',
-    'faq.q1.text': 'Es un ecosistema digital con enfoque cultural, comunitario y tecnológico, construido sobre Solana.',
-    'faq.q2.title': '¿Tiene tokenómica clara?',
-    'faq.q2.text': 'Sí. La tokenómica se define con supply total, tax fijo y mecanismos con autoridad renunciada.',
-    'faq.q3.title': '¿Es un proyecto serio?',
-    'faq.q3.text': 'Lo que se busca es transparencia, documentación, disciplina y una base técnica y comunicativa sólida.',
-    'footer.tagline': 'Diferentes culturas, una misma lengua.',
-    'footer.docs': 'Docs',
-    'footer.bottom': 'Made with intention.'
-  },
-  en: {
-    'nav.vision': 'Vision',
-    'nav.platform': 'Platform',
-    'nav.tokenomics': 'Tokenomics',
-    'nav.roadmap': 'Roadmap',
-    'nav.presale': 'Presale',
-    'nav.faq': 'FAQ',
-    'nav.docs': 'Docs',
-    'header.token': 'View token',
-    'hero.eyebrow': 'Open ecosystem · Solana',
-    'hero.titleLine1': 'Different cultures.',
-    'hero.titleLine2': 'One Lingua.',
-    'hero.lead': 'Lingua MemeCoin is a global community built around cultural diversity, open innovation, and the connection between people, ideas, and technologies.',
-    'hero.primaryCta': 'Explore $LNG',
-    'hero.secondaryCta': 'Discover vision',
-    'hero.pill1': '1B supply',
-    'hero.pill2': 'Solana',
-    'hero.pill3': 'Open source',
-    'hero.pill4': 'Community first',
-    'hero.cardTitle': 'Live ecosystem',
-    'hero.cardSubtitle': 'Solana network',
-    'ticker.supply': '1B TOTAL SUPPLY',
-    'ticker.open': 'OPEN SOURCE',
-    'ticker.supply2': '1B TOTAL SUPPLY',
-    'ticker.open2': 'OPEN SOURCE',
-    'vision.eyebrow': 'The idea',
-    'vision.title': 'Technology can also be human.',
-    'vision.p1': 'Lingua MemeCoin was created to turn cultural and linguistic diversity into a new layer of digital value: shared, open, and built in community.',
-    'vision.p2': 'It is not just a financial asset, but a structure of identity, collaboration, and open innovation designed to connect communities, languages, and resources in a meaningful way.',
-    'vision.link': 'Read our vision ↗',
-    'vision.card1.title': 'Culture',
-    'vision.card1.text': 'Linguistic diversity as a force for creativity, belonging, and global connection.',
-    'vision.card2.title': 'Community',
-    'vision.card2.text': 'An open space where everyone can participate, contribute, and grow.',
-    'vision.image.label': 'Many voices',
-    'vision.image.title': 'One community',
-    'platform.eyebrow': 'What does it represent?',
-    'platform.title': 'A cultural platform with digital structure.',
-    'platform.card1.title': 'Identity',
-    'platform.card1.text': 'Built around the idea of connecting cultures and languages under one ecosystem.',
-    'platform.card2.title': 'Infrastructure',
-    'platform.card2.text': 'Open, simple, and powerful, with a base designed to grow without losing clarity.',
-    'platform.card3.title': 'Action',
-    'platform.card3.text': 'A community that understands the project’s intent and executes it with discipline.',
-    'tokenomics.eyebrow': 'Foundation',
-    'tokenomics.title': 'Simple by design.<br><em>Built to last.</em>',
-    'tokenomics.subtitle': 'A transparent model grounded in clarity, defined mechanisms, and a community-first approach.',
-    'stats.supply': 'Total supply',
-    'stats.tax': 'Fixed tax',
-    'stats.potential': 'Potential',
-    'stats.community': 'Community',
-    'table.supplyTitle': 'Total supply',
-    'table.supplyText': '1,000,000,000 $LNG',
-    'table.networkTitle': 'Network',
-    'table.networkText': 'Solana',
-    'table.standardTitle': 'Token standard',
-    'table.standardText': 'Token-2022',
-    'table.mintTitle': 'Mint Authority',
-    'table.mintText': 'Renounced',
-    'table.freezeTitle': 'Freeze Authority',
-    'table.freezeText': 'Renounced',
-    'table.taxTitle': 'Fixed tax',
-    'table.taxText': '0.0001% immutable',
-    'tokenomics.link1': 'Read technical analysis ↗',
-    'tokenomics.link2': 'View on Solscan ↗',
-    'roadmap.eyebrow': 'Journey',
-    'roadmap.title': 'From local roots<br />to a global voice.',
-    'roadmap.text': 'We are building a solid foundation with clear steps and a strong narrative for the ecosystem’s growth.',
-    'roadmap.phase1.tag': '01 · NOW',
-    'roadmap.phase1.title': 'Foundation',
-    'roadmap.phase1.text': 'Identity, documentation, website, community, and public presence.',
-    'roadmap.phase2.tag': '02 · NEXT',
-    'roadmap.phase2.title': 'Expansion',
-    'roadmap.phase2.text': 'More tools, broader participation, and a stronger presence across languages.',
-    'roadmap.phase3.tag': '03 · FUTURE',
-    'roadmap.phase3.title': 'Impact',
-    'roadmap.phase3.text': 'A global digital cultural ecosystem with strong community roots.',
-    'presale.eyebrow': 'Presale',
-    'presale.title': 'A launch plan that is clear, organized, and transparent.',
-    'presale.item1': 'Structure definition',
-    'presale.item2': 'Public documentation',
-    'presale.item3': 'Protection measures',
-    'presale.item4': 'Active community',
-    'faq.eyebrow': 'Key questions',
-    'faq.title': 'Everything you need to know.',
-    'faq.q1.title': 'What is Lingua MemeCoin?',
-    'faq.q1.text': 'It is a digital ecosystem with a cultural, community, and technological focus, built on Solana.',
-    'faq.q2.title': 'Does it have clear tokenomics?',
-    'faq.q2.text': 'Yes. Tokenomics are defined with total supply, fixed tax, and mechanisms with renounced authority.',
-    'faq.q3.title': 'Is it a serious project?',
-    'faq.q3.text': 'The goal is transparency, documentation, discipline, and a solid technical and communicative foundation.',
-    'footer.tagline': 'Different cultures, one same language.',
-    'footer.docs': 'Docs',
-    'footer.bottom': 'Made with intention.'
-  }
-};
+// ==========================================
+// 🏛 LINGUA MEMECOIN ($LNG) - SCRIPT PRINCIPAL
+// ==========================================
 
-const langButtons = document.querySelectorAll('.lang-btn');
-const i18nNodes = document.querySelectorAll('[data-i18n]');
-
-function applyLanguage(lang) {
-  const dict = translations[lang] || translations.es;
-  i18nNodes.forEach((node) => {
-    const key = node.dataset.i18n;
-    const value = dict[key];
-    if (!value) return;
-    node.innerHTML = value;
-  });
-
-  document.documentElement.lang = lang;
-  langButtons.forEach((button) => {
-    const isActive = button.dataset.lang === lang;
-    button.classList.toggle('active', isActive);
-  });
+// --- 1. MOTOR DE ANIMACIÓN DEL ACORDEÓN INTERACTIVO (FAQs) ---
+function conmutarFaq(id) {
+    const contenedor = document.getElementById(`a${id}-wrapper`);
+    const icono = document.getElementById(`icon-faq-${id}`);
+    
+    if (contenedor.style.maxHeight && contenedor.style.maxHeight !== '0px') {
+        contenedor.style.maxHeight = '0px';
+        icono.style.transform = 'rotate(0deg)';
+        icono.innerText = '+';
+    } else {
+        // Cierra los otros de manera limpia para mejorar la visualización
+        for (let i = 1; i <= 10; i++) {
+            const c = document.getElementById(`a${i}-wrapper`);
+            const ic = document.getElementById(`icon-faq-${i}`);
+            if(c) c.style.maxHeight = '0px';
+            if(ic) { ic.style.transform = 'rotate(0deg)'; ic.innerText = '+'; }
+        }
+        // Abre el seleccionado midiendo su altura real en píxeles
+        contenedor.style.maxHeight = contenedor.scrollHeight + "px";
+        icono.style.transform = 'rotate(45deg)';
+        icono.innerText = '×';
+    }
 }
 
-langButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    applyLanguage(button.dataset.lang);
-  });
-});
+// --- 2. FUNCIÓN PARA COPIAR LA DIRECCIÓN DE CONTRATO (CA) ---
+function copiarContrato() {
+    const caTexto = document.getElementById("ca-text").innerText;
+    const botonCopiar = document.getElementById("btn-copiar");
 
-const nav = document.querySelector('.nav');
-const menuToggle = document.querySelector('.menu-toggle');
-const yearNode = document.getElementById('year');
+    navigator.clipboard.writeText(caTexto).then(() => {
+        const esIngles = document.getElementById("btn-en").classList.contains("bg-[#DFD5C6]");
+        botonCopiar.innerText = esIngles ? "Copied! ✓" : "¡Copiado! ✓";
+        botonCopiar.style.backgroundColor = "#22c55e"; // Cambio a color de éxito (Verde)
+        botonCopiar.style.color = "#ffffff";
 
-if (yearNode) {
-  yearNode.textContent = new Date().getFullYear();
+        setTimeout(() => {
+            botonCopiar.innerText = esIngles ? "Copy CA" : "Copiar CA";
+            botonCopiar.style.backgroundColor = "#DFD5C6"; // Regreso a estética mineral (Arena)
+            botonCopiar.style.color = "#0d0f12";
+        }, 2000);
+    }).catch(err => console.error("Error al copiar al portapapeles: ", err));
 }
 
-if (nav && menuToggle) {
-  menuToggle.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('open');
-    menuToggle.setAttribute('aria-expanded', String(isOpen));
-  });
-
-  nav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('open');
-      menuToggle.setAttribute('aria-expanded', 'false');
-    });
-  });
+// --- 3. INTERACTIVIDAD DEL GRÁFICO (DONUT CHART) ---
+function mostrarDetalle(porcentaje, seccion) {
+    document.getElementById('pct-centro').innerText = porcentaje;
+    document.getElementById('lbl-centro').innerText = seccion;
 }
 
-const revealItems = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.12 }
-);
-
-revealItems.forEach((item) => observer.observe(item));
-
-const anchorLinks = document.querySelectorAll('a[href^="#"]');
-anchorLinks.forEach((link) => {
-  link.addEventListener('click', (event) => {
-    const targetId = link.getAttribute('href');
-    const target = targetId ? document.querySelector(targetId) : null;
-    if (!target) return;
-    event.preventDefault();
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-});
-
-function countryFlag(code) {
-  if (!code || code.length !== 2) return '🌎';
-  return Array.from(code.toUpperCase()).map((char) => String.fromCodePoint(127397 + char.charCodeAt(0))).join('');
+function restaurarDetalle() {
+    document.getElementById('pct-centro').innerText = "1B";
+    document.getElementById('lbl-centro').innerText = "Suministro";
 }
 
-function showVisitorGreeting(country, code) {
-  if (sessionStorage.getItem('lingua-greeting-seen')) return;
+// --- 4. MOTOR DE EFECTO VISUAL: LETRAS CLÁSICAS EN CASCADA ---
+function iniciarFondoAnimado() {
+    const canvas = document.getElementById('bg-letras');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
 
-  const greeting = document.createElement('aside');
-  greeting.className = 'visitor-greeting';
-  greeting.setAttribute('role', 'status');
-  greeting.setAttribute('aria-live', 'polite');
+    function ajustarPantalla() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    ajustarPantalla();
+    window.addEventListener('resize', ajustarPantalla);
 
-  const flag = document.createElement('div');
-  flag.className = 'visitor-flag';
-  flag.textContent = countryFlag(code);
-  flag.setAttribute('aria-hidden', 'true');
+    // Caracteres basados en la filosofía lapidaria del proyecto
+    const alfabeto = "ΛΒΓΔΕΖΗΘΙΚΛΜΝΞOΠΡΣΤΥΦΧΨΩABCDEFGHIJKLMNOPQRSTUVWXYZ🪶🏛📜";
+    const letras = alfabeto.split("");
+    const tamañoFuente = 16;
+    const columnas = Math.floor(canvas.width / tamañoFuente);
+    const caidaY = Array(columnas).fill(1);
 
-  const copy = document.createElement('div');
-  copy.className = 'visitor-copy';
+    function dibujar() {
+        ctx.fillStyle = 'rgba(13, 15, 18, 0.06)'; // Crea un efecto sutil de difuminado continuo
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = 'rgba(223, 213, 198, 0.12)'; // Tono caliza opaco
+        ctx.font = tamañoFuente + 'px Cinzel, serif';
 
-  const title = document.createElement('strong');
-  title.textContent = 'Bienvenido/a a Lingua';
-
-  const subtitle = document.createElement('span');
-  subtitle.textContent = country ? `Nos visitas desde ${country}` : 'Una comunidad sin fronteras';
-
-  copy.append(title, subtitle);
-
-  const closeBtn = document.createElement('button');
-  closeBtn.type = 'button';
-  closeBtn.className = 'visitor-close';
-  closeBtn.setAttribute('aria-label', 'Cerrar saludo');
-  closeBtn.textContent = '×';
-
-  greeting.append(flag, copy, closeBtn);
-  document.body.appendChild(greeting);
-
-  requestAnimationFrame(() => greeting.classList.add('is-visible'));
-
-  const close = () => {
-    greeting.classList.remove('is-visible');
-    sessionStorage.setItem('lingua-greeting-seen', '1');
-    window.setTimeout(() => greeting.remove(), 350);
-  };
-
-  closeBtn.addEventListener('click', close);
-  window.setTimeout(close, 6500);
+        for (let i = 0; i < caidaY.length; i++) {
+            const texto = letras[Math.floor(Math.random() * letras.length)];
+            ctx.fillText(texto, i * tamañoFuente, caidaY[i] * tamañoFuente);
+            if (caidaY[i] * tamañoFuente > canvas.height && Math.random() > 0.975) {
+                caidaY[i] = 0;
+            }
+            caidaY[i]++;
+        }
+    }
+    setInterval(dibujar, 33); // Renderizado óptimo a ~30 FPS sin sobrecargar la CPU móvil
 }
 
-async function detectVisitorCountry() {
-  try {
-    const controller = new AbortController();
-    const timeoutId = window.setTimeout(() => controller.abort(), 2500);
-    const response = await fetch('https://ipapi.co/json/', {
-      signal: controller.signal,
-      headers: { Accept: 'application/json' }
-    });
-    window.clearTimeout(timeoutId);
+// --- 5. MÓDULO DE IDENTIDAD GEODINÁMICA POR IP ---
+async function detectarGuardian() {
+    const guardianBox = document.getElementById('guardian-name');
+    const guardianEmoji = document.getElementById('guardian-emoji');
+    try {
+        const respuesta = await fetch('https://ipapi.co/json/');
+        if (!respuesta.ok) throw new Error();
+        const datos = await respuesta.json();
+        const pais = datos.country_code;
+        
+        const guardianes = {
+            HN: { emoji: "🦜", nombre: "Ara Macao (Honduras)" },
+            MX: { emoji: "🦅", nombre: "Aquila Chrysaetos (México)" },
+            SV: { emoji: "🪶", nombre: "Torogoz (El Salvador)" },
+            NI: { emoji: "🦜", nombre: "Guardabarranco (Nicaragua)" },
+            CO: { emoji: "🦅", nombre: "Vultur Gryphus (Colombia)" },
+            EC: { emoji: "🦅", nombre: "Vultur Gryphus (Ecuador)" }
+        };
 
-    if (!response.ok) throw new Error('Geolocation unavailable');
-
-    const data = await response.json();
-    showVisitorGreeting(data.country_name, data.country_code);
-  } catch (_error) {
-    showVisitorGreeting('', '');
-  }
+        if (guardianes[pais]) {
+            guardianEmoji.innerText = guardianes[pais].emoji;
+            guardianBox.innerText = guardianes[pais].nombre;
+        } else {
+            guardianEmoji.innerText = "🦜";
+            guardianBox.innerText = "Ara Macao (Origen Universal)";
+        }
+    } catch (e) {
+        guardianEmoji.innerText = "🦜";
+        guardianBox.innerText = "Ara Macao (Origen Global)";
+    }
 }
 
-const savedLanguage = (() => {
-  try {
-    return localStorage.getItem('lingua-language') || 'es';
-  } catch {
-    return 'es';
-  }
-})();
-
-applyLanguage(savedLanguage);
-detectVisitorCountry();
+// --- 6. MOTOR DE TRADUCCIÓN INTERNACIONAL (I18N) ---
+const textos = {
+    es: {
+        tTokenomics: "Distribución de Tokens y Propiedad",
+        subTokenomics: "Suministro fijo de 1,000,000,000 $LNG. Autoridades de emisión y bloqueo completamente renunciadas.",
+        tFaq: "Preguntas Frecuentes",
+        subFaq: "Respuestas técnicas y culturales sobre el ecosistema descentralizado.",
+        q1: "¿Qué es Lingua MemeCoin y por qué se define como un movimiento cultural?",
+        a1: "A diferencia de los tokens puramente especulativos, Lingua es un manifiesto de identidad descentralizado sobre Solana. Nace en Honduras con el propósito de celebrar la diversidad lingüística regional, utilizando el código abierto para conectar historias humanas en la Web3 sin depender de capitales privados.",
+        q2: "¿Por qué se pospuso la preventa del token $LNG?",
+        a2: "Priorizamos la seguridad técnica absoluta sobre la prisa comercial. Decidimos postergar el lanzamiento para auditar y blindar los contratos automatizados de distribución masiva, protegiendo los fondos de nuestra comunidad contra vulnerabilidades de código.",
+        q3: "¿Qué significa que las autoridades de emisión (Mint) y bloqueo (Freeze) estén renunciadas?",
+        a3: "Significa que el código del token es 100% inmutable. Nadie (ni el equipo desarrollador) puede crear nuevos tokens para inflar el suministro ni congelar los fondos de las billeteras de los usuarios, garantizando un entorno libre de censura.",
+        q4: "¿Cómo funciona el Sistema de Identidad Geodinámica?",
+        a4: "La interfaz detecta de forma segura tu ubicación geográfica aproximada mediante IP para asignarte un guardián cultural nativo (como la Ara Macao en Honduras, el Águila Real en México o el Torogoz en El Salvador), adaptando la narrativa del sitio a tu identidad.",
+        q5: "¿Cómo puedo participar en la gobernanza abierta del proyecto?",
+        a5: "Al ser un ecosistema basado en GitHub bajo licencia MIT, cualquier actualización de la interfaz o la documentación es propuesta de forma transparente. La comunidad actúa como un filtro colectivo aprobando o mejorando el repositorio.",
+        q6: "¿Qué ventajas ofrece usar el estándar Token-2022 de Solana en este proyecto?",
+        a6: "El estándar Token-2022 (SPL de funcionalidad extendida) nos permite blindar características avanzadas de inmutabilidad directamente en el código de la blockchain de Solana, asegurando que las reglas de transparencia y las restricciones de impuestos (Tax) sean perpetuas y no modificables por terceros.",
+        q7: "¿Por qué la tasa de transacción (Tax) está fijada en 0.0001% y cuál es su plan futuro?",
+        a7: "Al desplegar el contrato inteligente utilizando herramientas no-code, la plataforma nos obligó técnicamente a integrar un porcentaje de comisión, a pesar de que nuestra meta máxima original era dejarlo estrictamente en cero. Debido a esto, fijamos un valor casi imperceptible de 0.0001%. No obstante, en futuras actualizaciones del ecosistema se modificará la tasa a un 3.5% definitivo. Este fondo se utilizará de forma transparente para asegurar los pagos operativos, el mantenimiento de la infraestructura técnica, la ejecución de futuras quemas de tokens y el financiamiento de programas de recompensas directas para los usuarios.",
+        q8: "¿Cómo puedo auditar la Dirección de Contrato (CA) de forma independiente?",
+        a8: "La transparencia es total. Puedes copiar nuestra CA pública y pegarla en cualquier explorador de bloques de Solana reconocido, como Solscan o Solana Explorer. Allí podrás verificar en tiempo real que los permisos de emisión (Mint) y congelamiento (Freeze) marcan 'None' o 'Revoked'.",
+        q9: "¿Por qué el suministro total está fijado estrictamente en 1,000,000,000 $LNG?",
+        a9: "Establecemos un límite estricto para garantizar un modelo no inflacionario. Al haber renunciado a la autoridad de acuñación, es matemáticamente imposible que se creen nuevos tokens en el futuro, protegiendo la proporción de distribución comunitaria original.",
+        q10: "¿De qué manera el proyecto asegura que no ocurrirá un retiro masivo de fondos (Rug Pull)?",
+        a10: "El 35% del suministro destinado al Pool de Liquidez se programa para ser enviado a una dirección muerta (Burn Address). Al destruir las llaves del par comercial, nadie tiene la facultad técnica de retirar la liquidez del mercado, protegiendo las transacciones colectivas de la comunidad."
+    },
+    en: {
+        tTokenomics: "Token Allocation & Ownership",
