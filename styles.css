@@ -1,73 +1,39 @@
+/* ========================================================
+   🏛 LINGUA MEMECOIN ($LNG) - ARQUITECTURA VISUAL MINERAL
+   ======================================================== */
 
-/* Neutral earth palette and Mayan-inspired editorial styling. The visual reference is geometric and ceremonial, not a reproduction of a specific historical script. */
-:root {
-  --bg: #211d1a;
-  --bg-2: #2c2722;
-  --surface-light: #e9e2d5;
-  --surface-card: #ded4c4;
-  --surface-soft: #302a25;
-  --text: #f2ede4;
-  --text-dark: #29231f;
-  --muted: #b9afa2;
-  --muted-dark: #746a5e;
-  --lime: #b9a36a;
-  --lime-soft: #d7c9a3;
-  --purple: #936f56;
-  --purple-soft: #c4a58d;
-  --line: rgba(242, 237, 228, 0.13);
-  --line-dark: rgba(41, 35, 31, 0.14);
-  --shadow: 0 28px 65px rgba(27, 22, 18, 0.28);
-  --container: 1180px;
+/* Configuración del fondo base y tipografías globales */
+body {
+    background-color: #0d0f12; /* Color Obsidiana Oficial */
+    color: #DFD5C6;            /* Color Caliza/Arena Oficial */
+    overflow-x: hidden;
 }
 
-body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); }
-.brand, .hero-copy h1, .section-copy h2, .center-title h2, .platform-header h2, .faq-header h2, .cta-box h2, .feature-card h3, .platform-card h3, .roadmap-item h3, .image-overlay strong { font-family: 'Cinzel', serif; }
-.hero-copy h1, .section-copy h2, .center-title h2, .platform-header h2, .faq-header h2, .cta-box h2 { font-weight: 700; letter-spacing: -0.045em; }
-.console-body { font-family: 'Space Mono', monospace; }
+/* Lienzo del Canvas para las letras clásicas en cascada */
+#bg-letras {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* Permite hacer clic en los botones de encima */
+    z-index: 0;
+    opacity: 0.15;        /* Opacidad sutil para no cansar la vista */
+}
 
-.noise { background-image: radial-gradient(rgba(242,237,228,0.08) 0.5px, transparent 0.8px); opacity: 0.1; }
-.site-header { background: rgba(33, 29, 26, 0.86); border-bottom-color: rgba(242,237,228,0.1); }
-.brand-mark { background: var(--lime); color: var(--bg); border-radius: 5px; transform: rotate(45deg); }
-.brand-mark::first-letter { display: inline-block; transform: rotate(-45deg); }
-.nav a::after { background: var(--lime); }
-.lang-switch { border-color: rgba(242,237,228,0.17); background: rgba(242,237,228,0.04); }
-.lang-btn.active { background: rgba(185,163,106,0.28); }
-.button { border-radius: 5px; letter-spacing: 0.02em; }
-.button-primary { background: linear-gradient(135deg, #c4af78, #a98d59); color: #211d1a; box-shadow: 0 18px 35px rgba(111,82,47,0.25); }
-.button-ghost { background: rgba(242,237,228,0.03); border-color: rgba(242,237,228,0.2); }
-.menu-toggle { border-radius: 5px; border-color: rgba(242,237,228,0.2); }
-.eyebrow { letter-spacing: 0.22em; }
-.eyebrow span, .live-dot { background: var(--lime); box-shadow: 0 0 18px rgba(185,163,106,0.8); }
-.hero-copy h1 { font-size: clamp(3.35rem, 5.7vw, 6rem); line-height: 0.98; }
-.hero-copy h1 em, .section-copy h2 em, .center-title h2 em, .platform-header h2 em, .faq-header h2 em { color: var(--lime); }
-.meta-pill { border-color: var(--line); }
-.glow-one { background: rgba(147,111,86,0.32); }
-.glow-two { background: rgba(185,163,106,0.2); }
-.console-card { background: rgba(44,39,34,0.94); border-color: var(--line); border-radius: 5px; }
-.console-topbar { background: rgba(242,237,228,0.035); }
-.key { color: #c4a58d; } .str { color: #c4c18e; } .warn { color: #d59b84; }
-.floating-card { background: rgba(33,29,26,0.94); border-color: var(--line); border-radius: 5px; }
-.ticker-wrap { background: #a88955; color: #211d1a; }
-.section-light { background: var(--surface-light); color: var(--text-dark); }
-.section-dark { background: linear-gradient(180deg, #211d1a 0%, #302a25 100%); }
-.feature-card, .stat-box, .faq-item { border-radius: 5px; }
-.feature-card { background: #e1d7c7; box-shadow: 0 20px 32px rgba(41,35,31,0.08); }
-.dark-card { background: var(--surface-soft); }
-.feature-index, .card-tag, .stat-box strong { color: var(--purple); }
-.image-card { border-radius: 5px; }
-.platform-card { border-radius: 5px; background: rgba(242,237,228,0.035); border-color: var(--line); }
-.platform-card:hover { border-color: rgba(185,163,106,0.45); }
-.token-table-wrap { border-radius: 5px; background: rgba(41,35,31,0.035); }
-.status.success { background: rgba(103,132,91,0.16); color: #527044; }
-.roadmap-list::before { background: linear-gradient(180deg, rgba(147,111,86,0.9), rgba(185,163,106,0.8)); }
-.roadmap-dot { border-color: var(--purple); box-shadow: 0 0 0 6px rgba(147,111,86,0.13); }
-.roadmap-item.active .roadmap-dot { background: var(--purple); }
-.section-cta { background: linear-gradient(135deg, #e9e2d5 0%, #d9cebd 100%); }
-.cta-box { border-radius: 5px; }
-.list-inline span { border-radius: 5px; }
-.footer { background: #1b1816; }
-.footer-links a:hover, .inline-link:hover { color: #8f704e; }
+/* Modificadores para el Acordeón de Preguntas Frecuentes (FAQs) */
+.max-h-0 {
+    max-height: 0;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-@media (max-width: 640px) {
-  .hero-copy h1 { font-size: clamp(2.8rem, 16vw, 4.1rem); }
+/* Animaciones y Hover para los segmentos del Gráfico de Pastel SVG */
+.segmento-grafico {
+    transition: stroke-width 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                filter 0.3s ease;
+}
+
+.segmento-grafico:hover {
+    stroke-width: 20; /* Ensancha el trozo del gráfico al pasar el cursor */
+    filter: drop-shadow(0px 0px 12px rgba(223, 213, 198, 0.35));
 }
